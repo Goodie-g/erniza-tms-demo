@@ -18,12 +18,21 @@ UPLOADS_DIR="${UPLOAD_DIR:-/app/apps/api/uploads}"
 # container can leave PGlite lock files behind; they are safe to remove because
 # this container runs a single embedded database instance.
 mkdir -p "$UPLOADS_DIR"
+
+# PostgreSQL needs these runtime directories. They are empty, so Git cannot
+# store them; recreate them in case the checkout omits them.
+for dir in pg_commit_ts pg_dynshmem pg_logical/mappings pg_logical/snapshots \
+  pg_notify pg_replslot pg_serial pg_snapshots pg_stat pg_stat_tmp pg_tblspc \
+  pg_twophase pg_wal/archive_status; do
+  mkdir -p "$PGLITE_DIR/$dir"
+done
+
 rm -f "$PGLITE_DIR/postmaster.pid" "$PGLITE_DIR"/.s.PGSQL.* 2>/dev/null || true
 
 echo "Starting Erniza TMS demo on port ${PORT:-10000}"
 echo "Public URL: ${API_PUBLIC_URL:-http://localhost:${PORT:-10000}}"
 
-if [ "${PREFLIGHT:-1}" = "1" ]; then
+if [ "${PREFLIGHT:-0}" = "1" ]; then
   node /app/preflight.mjs || true
   rm -f "$PGLITE_DIR/postmaster.pid" "$PGLITE_DIR"/.s.PGSQL.* 2>/dev/null || true
 fi
