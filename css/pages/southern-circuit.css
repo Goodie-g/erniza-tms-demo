@@ -1,0 +1,224 @@
+    .south-hero {
+      background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45)), 
+                  url('https://images.unsplash.com/photo-1534177616072-8e0e92d8bb56?q=80&w=1470&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center 45%;
+      min-height: 55vh;
+      display: flex;
+      align-items: center;
+      color: white;
+      border-radius: 0 0 50px 50px;
+      margin-bottom: 50px;
+    }
+
+    .south-hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .intro-section {
+      margin-bottom: 60px;
+    }
+
+    .intro-section h2 {
+      color: var(--earth-green);
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .intro-section p {
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 15px;
+      max-width: 900px;
+    }
+
+    .intro-highlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .intro-highlight-item {
+      background: white;
+      padding: 25px 20px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition-smooth);
+    }
+
+    .intro-highlight-item:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .intro-highlight-item i {
+      font-size: 2rem;
+      color: var(--savanna-gold);
+      margin-bottom: 10px;
+    }
+
+    .intro-highlight-item h4 {
+      color: var(--earth-green);
+      margin-bottom: 5px;
+    }
+
+    .intro-highlight-item p {
+      color: var(--gray-medium);
+      font-size: 0.9rem;
+    }
+
+    /* Park Cards - Matching the Northern Circuit style */
+    .park-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+
+    .park-card {
+      background: white;
+      border-radius: 25px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition-smooth);
+    }
+
+    .park-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .park-card-image {
+      height: 250px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .park-card-badge {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      z-index: 5;
+      color: white;
+    }
+
+    .badge-remote {
+      background: #2c4a2e;
+    }
+
+    .badge-lions {
+      background: #c99c4a;
+      color: #1e1e1e;
+    }
+
+    .badge-accessible {
+      background: #1a5276;
+    }
+
+    .park-card-body {
+      padding: 25px;
+    }
+
+    .park-card-body h3 {
+      font-size: 1.6rem;
+      color: var(--deep-brown);
+      margin-bottom: 12px;
+    }
+
+    .park-card-body p {
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .park-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .park-feature {
+      padding: 6px 14px;
+      background: var(--gray-light);
+      border-radius: 15px;
+      font-size: 0.85rem;
+      color: var(--deep-brown);
+    }
+
+    .park-feature i {
+      color: var(--savanna-gold);
+      margin-right: 5px;
+    }
+
+    .wildlife-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 15px 0;
+    }
+
+    .wildlife-tag {
+      padding: 5px 12px;
+      background: #f0f0e8;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      color: #555;
+    }
+
+    .why-south {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin: 60px 0;
+    }
+
+    .why-card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: var(--shadow-sm);
+      border-top: 4px solid var(--savanna-gold);
+      transition: var(--transition-smooth);
+    }
+
+    .why-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .why-card h4 {
+      color: var(--earth-green);
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .why-card i {
+      font-size: 1.5rem;
+      color: var(--savanna-gold);
+      margin-right: 10px;
+    }
+
+    .why-card p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 768px) {
+      .south-hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .park-cards {
+        grid-template-columns: 1fr;
+      }
+    }

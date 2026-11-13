@@ -1,0 +1,219 @@
+/* Safari page specific styles */
+.safari-hero {
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.5)), 
+                url('../../assets/Tanzania-safaris-hero-section.jpg');
+    background-size: cover;
+    background-position: center 40%;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    border-radius: 0 0 50px 50px;
+    margin-bottom: 60px;
+}
+
+.safari-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-shadow: 2px 4px 15px rgba(0,0,0,0.5);
+}
+
+.safari-hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-top: 15px;
+    opacity: 0.95;
+}
+
+/* Filter tabs */
+.filter-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.filter-tab {
+    padding: 10px 25px;
+    background: white;
+    border: 2px solid var(--earth-green);
+    color: var(--earth-green);
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition-smooth);
+    font-family: inherit;
+    font-size: 0.9rem;
+}
+
+.filter-tab:hover,
+.filter-tab.active {
+    background: var(--earth-green);
+    color: white;
+}
+
+/* Safari grid */
+.safari-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.safari-card-detailed {
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-smooth);
+    cursor: pointer;
+}
+
+.safari-card-detailed:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+}
+
+.safari-card-img {
+    height: 280px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: transform 0.6s ease;
+}
+
+.safari-card-detailed:hover .safari-card-img {
+    transform: scale(1.05);
+}
+
+.safari-card-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    z-index: 10;
+}
+
+.badge-popular {
+    background: var(--savanna-gold);
+    color: #1e1e1e;
+}
+
+.badge-luxury {
+    background: #1e1e1e;
+    color: var(--savanna-gold);
+}
+
+.badge-value {
+    background: var(--earth-green);
+    color: white;
+}
+
+.badge-new {
+    background: #e74c3c;
+    color: white;
+}
+
+.safari-card-body {
+    padding: 25px;
+}
+
+.safari-card-body h3 {
+    font-size: 1.5rem;
+    color: var(--deep-brown);
+    margin-bottom: 10px;
+}
+
+.safari-card-meta {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.safari-card-meta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--gray-medium);
+    font-size: 0.9rem;
+}
+
+.safari-card-meta i {
+    color: var(--savanna-gold);
+}
+
+.safari-card-body p {
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.safari-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.safari-price {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--savanna-gold);
+}
+
+.safari-price small {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--gray-medium);
+}
+
+/* Quick stats bar */
+.quick-stats {
+    background: white;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    margin: -30px 0 60px;
+    position: relative;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.quick-stat h3 {
+    font-size: 2rem;
+    color: var(--earth-green);
+    font-weight: 700;
+}
+
+.quick-stat p {
+    color: var(--gray-medium);
+    margin-top: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .safari-hero h1 {
+    font-size: 2.2rem;
+    }
+
+    .safari-grid {
+    grid-template-columns: 1fr;
+    }
+
+    .safari-card-img {
+    height: 220px;
+    }
+
+    .quick-stats {
+    grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -1,0 +1,277 @@
+.meru-hero {
+    background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45)), 
+                url('https://images.unsplash.com/photo-1523805009345-7448845a9e53?q=80&w=1472&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center 55%;
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    border-radius: 0 0 50px 50px;
+    margin-bottom: 50px;
+}
+
+.meru-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.meru-hero .tagline {
+    font-size: 1.2rem;
+    opacity: 0.95;
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+    margin-bottom: 50px;
+    align-items: start;
+}
+
+.overview-text h2 {
+    color: var(--earth-green);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.overview-text p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.highlight-card {
+    background: white;
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: var(--shadow-md);
+    position: sticky;
+    top: 100px;
+}
+
+.highlight-card .price-large {
+    font-size: 2.5rem;
+    color: var(--savanna-gold);
+    font-weight: 700;
+    text-align: center;
+}
+
+.highlight-card .price-note {
+    text-align: center;
+    color: var(--gray-medium);
+    margin-bottom: 20px;
+}
+
+.highlight-card .btn {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.info-list {
+    margin-top: 20px;
+}
+
+.info-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.info-list li i {
+    color: var(--savanna-gold);
+    width: 20px;
+    text-align: center;
+}
+
+.stats-grid-meru {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.stat-box {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-smooth);
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.stat-box i {
+    font-size: 2rem;
+    color: var(--savanna-gold);
+    margin-bottom: 12px;
+}
+
+.stat-box h3 {
+    color: var(--earth-green);
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.stat-box p {
+    color: var(--gray-medium);
+    font-size: 0.9rem;
+}
+
+.itinerary-section {
+    background: white;
+    border-radius: 30px;
+    padding: 40px;
+    margin: 40px 0;
+    box-shadow: var(--shadow-sm);
+}
+
+.itinerary-section h2 {
+    color: var(--earth-green);
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.day-card {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+    padding: 25px;
+    background: var(--gray-light);
+    border-radius: 20px;
+    border-left: 4px solid var(--savanna-gold);
+    transition: var(--transition-smooth);
+}
+
+.day-card:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-sm);
+}
+
+.day-icon {
+    font-size: 2rem;
+    color: var(--savanna-gold);
+    min-width: 50px;
+    text-align: center;
+}
+
+.day-content h4 {
+    color: var(--earth-green);
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.day-content .day-stats {
+    display: flex;
+    gap: 20px;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.day-content .day-stats span {
+    font-size: 0.9rem;
+    color: var(--gray-medium);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.wildlife-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.wildlife-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.wildlife-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.wildlife-card-body {
+    padding: 20px;
+}
+
+.wildlife-card-body h4 {
+    color: var(--earth-green);
+    margin-bottom: 8px;
+}
+
+.what-to-expect {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin: 40px 0;
+}
+
+.expect-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-sm);
+}
+
+.expect-card i {
+    font-size: 2rem;
+    color: var(--savanna-gold);
+    margin-bottom: 15px;
+}
+
+.expect-card h4 {
+    color: var(--earth-green);
+    margin-bottom: 10px;
+}
+
+.expect-card ul {
+    list-style: none;
+}
+
+.expect-card li {
+    padding: 5px 0;
+    color: #555;
+}
+
+.expect-card li::before {
+    content: '•';
+    color: var(--savanna-gold);
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+@media (max-width: 968px) {
+    .overview-grid {
+    grid-template-columns: 1fr;
+    }
+
+    .highlight-card {
+    position: static;
+    }
+
+    .meru-hero h1 {
+    font-size: 2.2rem;
+    }
+
+    .itinerary-section {
+    padding: 25px 20px;
+    }
+
+    .day-card {
+    flex-direction: column;
+    gap: 10px;
+    }
+}

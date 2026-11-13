@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Explore Tanzania's Southern Circuit - Selous Game Reserve, Ruaha National Park, and Mikumi. Remote wilderness, boat safaris, and authentic African adventures.">
+  <title>Southern Circuit Safaris | Erniza Africa Safaris</title>
+
+  <!-- Vercel Analytics -->
+    <script>
+      window.va = window.va || function () {
+        (window.vaq = window.vaq || []).push(arguments);
+      };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="shortcut icon" href="assets/Logo/ERNIZA LOGO GOLDEN BROWN WHITE BACKGROUND.png" type="image/x-icon" style="size: 48x48;">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/pages/southern-circuit.css">
+
+</head>
+<body>
+   <!-- Language Switcher -->
+  <div class="language-switcher" id="languageSwitcher">
+    <button class="lang-btn" onclick="toggleLanguageMenu()">
+      <i class="fas fa-globe"></i> <span id="currentLang">English</span> <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="language-menu" id="languageMenu">
+      <a href="#" onclick="changeLanguage('en'); return false;" class="active">🇬🇧 English</a>
+      <a href="#" onclick="changeLanguage('fr'); return false;">🇫🇷 Français</a>
+      <a href="#" onclick="changeLanguage('de'); return false;">🇩🇪 Deutsch</a>
+      <a href="#" onclick="changeLanguage('es'); return false;">🇪🇸 Español</a>
+      <a href="#" onclick="changeLanguage('it'); return false;">🇮🇹 Italiano</a>
+      <a href="#" onclick="changeLanguage('pt'); return false;">🇵🇹 Português</a>
+      <a href="#" onclick="changeLanguage('ru'); return false;">🇷🇺 Русский</a>
+      <a href="#" onclick="changeLanguage('zh-CN'); return false;">🇨🇳 中文 (简体)</a>
+      <a href="#" onclick="changeLanguage('ja'); return false;">🇯🇵 日本語</a>
+      <a href="#" onclick="changeLanguage('ko'); return false;">🇰🇷 한국어</a>
+      <a href="#" onclick="changeLanguage('ar'); return false;">🇸🇦 العربية</a>
+      <a href="#" onclick="changeLanguage('nl'); return false;">🇳🇱 Nederlands</a>
+    </div>
+  </div>
+  <header style="background: var(--earth-green); padding: 10px 0;">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <img src="assets/Logo/ERNIZA LOGOTYPE BLOCK GOLDEN BROWN WHITE BACKGROUND.png" alt="" style="width: 110px;">
+        </a>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html">Home</a>
+          <a href="tanzania-safaris.html">Tanzania Safaris</a>
+          <a href="mountains.html">Mountains</a>
+          <a href="destinations.html" class="active">Destinations</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main >
+    <section class="south-hero" style="background-image: url(assets/selous/aron-marinelli-Bcf8FNy56J8-unsplash.jpg);">
+      <div class="container">
+        <h1>Southern Circuit</h1>
+        <p style="font-size: 1.3rem; opacity: 0.95;">Wild, Remote & Untamed — Selous, Ruaha & Mikumi</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> <span>/</span>
+        <a href="destinations.html">Destinations</a> <span>/</span>
+        <span>Southern Circuit</span>
+      </div>
+
+      <!-- Introduction -->
+      <div class="intro-section fade-in">
+        <h2>Africa's Best-Kept Secret</h2>
+        <p>While the Northern Circuit draws the crowds, the Southern Circuit remains wonderfully wild and untouched. This is Tanzania at its most authentic — vast landscapes with few vehicles, intimate wildlife encounters, and a sense of true adventure.</p>
+        <p>Here you can take boat safaris through hippo-filled channels, walk through the bush with an armed ranger, and watch lions stalk their prey without another vehicle in sight. The Southern Circuit offers a completely different safari experience — raw, exclusive, and deeply personal.</p>
+        
+        <div class="intro-highlights">
+          <div class="intro-highlight-item">
+            <i class="fas fa-water"></i>
+            <h4>Boat Safaris</h4>
+            <p>Unique to Selous</p>
+          </div>
+          <div class="intro-highlight-item">
+            <i class="fas fa-hiking"></i>
+            <h4>Walking Safaris</h4>
+            <p>Guided bush walks</p>
+          </div>
+          <div class="intro-highlight-item">
+            <i class="fas fa-users-slash"></i>
+            <h4>No Crowds</h4>
+            <p>Exclusive experience</p>
+          </div>
+          <div class="intro-highlight-item">
+            <i class="fas fa-paw"></i>
+            <h4>Wild Dogs</h4>
+            <p>Rare sightings</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Park Cards - Matching the Northern Circuit style -->
+      <div class="park-cards">
+        <!-- Selous Game Reserve -->
+        <div class="park-card fade-in">
+          <div class="park-card-image" style="background-image: url('assets/selous/nichika-sakurai-ShqhYYKX_gI-unsplash.jpg');">
+            <span class="park-card-badge badge-remote">Africa's Largest Reserve</span>
+          </div>
+          <div class="park-card-body">
+            <h3>Selous Game Reserve (Nyerere NP)</h3>
+            <p>Now renamed Nyerere National Park, the Selous is Africa's largest protected wildlife area — bigger than Switzerland. The lifeblood of the reserve is the mighty Rufiji River, which creates a network of lakes and channels perfect for boat safaris.</p>
+            <div class="park-features">
+              <span class="park-feature"><i class="fas fa-chart-line"></i> 30,000+ km²</span>
+              <span class="park-feature"><i class="fas fa-water"></i> Boat Safaris</span>
+              <span class="park-feature"><i class="fas fa-hiking"></i> Walking Safaris</span>
+              <span class="park-feature"><i class="fas fa-paw"></i> Wild Dogs</span>
+            </div>
+            <div class="wildlife-list">
+              <span class="wildlife-tag">Elephants</span>
+              <span class="wildlife-tag">Hippos</span>
+              <span class="wildlife-tag">Crocodiles</span>
+              <span class="wildlife-tag">Lions</span>
+              <span class="wildlife-tag">Wild Dogs</span>
+              <span class="wildlife-tag">Buffaloes</span>
+              <span class="wildlife-tag">Giraffes</span>
+              <span class="wildlife-tag">Zebras</span>
+            </div>
+            <a href="safari-detail.html?id=selous-reserve" class="btn btn-primary" style="width: 100%;">View Selous Safaris</a>
+          </div>
+        </div>
+
+        <!-- Ruaha National Park -->
+        <div class="park-card fade-in">
+          <div class="park-card-image" style="background-image: url('assets/selous/aron-marinelli-y4oAm4YZJsE-unsplash.jpg');">
+            <span class="park-card-badge badge-lions">10% of World's Lions</span>
+          </div>
+          <div class="park-card-body">
+            <h3>Ruaha National Park</h3>
+            <p>Ruaha is the park that safari connoisseurs whisper about. Tanzania's largest national park, it's home to 10% of the world's lion population and boasts incredible predator densities. The Great Ruaha River acts as a lifeline, drawing massive herds during the dry season.</p>
+            <div class="park-features">
+              <span class="park-feature"><i class="fas fa-chart-line"></i> 20,226 km²</span>
+              <span class="park-feature"><i class="fas fa-lion"></i> Massive Prides</span>
+              <span class="park-feature"><i class="fas fa-binoculars"></i> 570+ Birds</span>
+              <span class="park-feature"><i class="fas fa-users-slash"></i> Exclusive</span>
+            </div>
+            <div class="wildlife-list">
+              <span class="wildlife-tag">Lions</span>
+              <span class="wildlife-tag">Leopards</span>
+              <span class="wildlife-tag">Cheetahs</span>
+              <span class="wildlife-tag">Elephants</span>
+              <span class="wildlife-tag">Wild Dogs</span>
+              <span class="wildlife-tag">Greater Kudu</span>
+              <span class="wildlife-tag">Roan Antelope</span>
+              <span class="wildlife-tag">Sable Antelope</span>
+            </div>
+            <a href="safari-detail.html?id=ruaha-park" class="btn btn-primary" style="width: 100%;">View Ruaha Safaris</a>
+          </div>
+        </div>
+
+        <!-- Mikumi National Park -->
+        <div class="park-card fade-in">
+          <div class="park-card-image" style="background-image: url('assets/Mikumi/k15-photos-RdJtoKVIK3g-unsplash.jpg');">
+            <span class="park-card-badge badge-accessible">Easy Access from Dar</span>
+          </div>
+          <div class="park-card-body">
+            <h3>Mikumi National Park</h3>
+            <p>Often compared to a mini-Serengeti, Mikumi offers excellent wildlife viewing just a few hours' drive from Dar es Salaam. The Mkata Floodplain provides classic savanna scenery with open plains where you can see lions, giraffes, zebras, and elephants against the backdrop of the Uluguru Mountains.</p>
+            <div class="park-features">
+              <span class="park-feature"><i class="fas fa-chart-line"></i> 3,230 km²</span>
+              <span class="park-feature"><i class="fas fa-car"></i> 4-5 hrs from Dar</span>
+              <span class="park-feature"><i class="fas fa-tree"></i> Open Plains</span>
+              <span class="park-feature"><i class="fas fa-mountain"></i> Mountain Views</span>
+            </div>
+            <div class="wildlife-list">
+              <span class="wildlife-tag">Lions</span>
+              <span class="wildlife-tag">Giraffes</span>
+              <span class="wildlife-tag">Zebras</span>
+              <span class="wildlife-tag">Elephants</span>
+              <span class="wildlife-tag">Buffaloes</span>
+              <span class="wildlife-tag">Wildebeest</span>
+              <span class="wildlife-tag">Hippos</span>
+              <span class="wildlife-tag">Crocodiles</span>
+            </div>
+            <a href="safari-detail.html?id=mikumi-park" class="btn btn-primary" style="width: 100%;">View Mikumi Safaris</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Why Choose Southern Circuit -->
+      <div class="fade-in">
+        <h2 style="color: var(--earth-green); text-align: center; margin-bottom: 30px;">Why Choose the Southern Circuit?</h2>
+        <div class="why-south">
+          <div class="why-card">
+            <h4><i class="fas fa-users-slash"></i> Exclusivity</h4>
+            <p>Escape the crowds. While the Serengeti can have dozens of vehicles at a sighting, in the South you'll often be the only ones there, creating truly intimate wildlife encounters.</p>
+          </div>
+          <div class="why-card">
+            <h4><i class="fas fa-water"></i> Unique Activities</h4>
+            <p>Boat safaris on the Rufiji River, walking safaris with armed rangers, and fly camping offer experiences simply not available on the Northern Circuit.</p>
+          </div>
+          <div class="why-card">
+            <h4><i class="fas fa-paw"></i> African Wild Dogs</h4>
+            <p>The Southern Circuit offers some of the best chances in Africa to see the endangered African wild dog in its natural habitat — a highlight for any safari enthusiast.</p>
+          </div>
+          <div class="why-card">
+            <h4><i class="fas fa-leaf"></i> Raw Wilderness</h4>
+            <p>Experience Africa as it was meant to be — vast, untamed, and authentically wild. No mass tourism, no crowded viewpoints, just pure safari magic.</p>
+          </div>
+          <div class="why-card">
+            <h4><i class="fas fa-camera"></i> Incredible Photography</h4>
+            <p>With fewer vehicles and patient guides, you'll have time to compose the perfect shot without rushing. The light and landscapes are spectacular.</p>
+          </div>
+          <div class="why-card">
+            <h4><i class="fas fa-hand-holding-heart"></i> Great Value</h4>
+            <p>Often more affordable than the Northern Circuit while offering a more intimate and personalized experience with higher guide-to-guest ratios.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-section fade-in">
+        <h2>Discover the Wild South</h2>
+        <p style="margin-bottom: 25px;">Ready for an authentic African safari away from the crowds? Let us design your perfect Southern Circuit adventure.</p>
+        <a href="contact.html" class="btn btn-gold btn-lg">
+          <i class="fas fa-compass"></i> Explore Southern Safaris
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4><i class="fas fa-paw" style="color: var(--savanna-gold);"></i> Erniza Africa Safaris</h4>
+          <p><i class="fas fa-map-marker-alt"></i> Arusha, Tanzania</p>
+          <a href="tel:+255759049127"><p><i class="fas fa-phone"></i> +255 776 749 127</p></a>
+          <a href="mailto: info@ernizaafricasafaris.com"><p><i class="fas fa-envelope"></i> info@ernizaafricasafaris.com</p></a>
+          <p style="color: var(--savanna-gold); margin-top: 10px;">🇹🇿 100% Tanzanian Owned</p>
+        </div>
+        <div class="footer-col">
+          <h4>Safari Circuits</h4>
+          <a href="northern-circuit.html">Northern Circuit</a>
+          <a href="southern-circuit.html">Southern Circuit</a>
+          <a href="western-circuit.html">Western Circuit</a>
+          <a href="zanzibar.html">Zanzibar</a>
+        </div>
+        <div class="footer-col">
+          <h4>Southern Parks</h4>
+          <a href="safari-detail.html?id=selous-reserve">Selous (Nyerere)</a>
+          <a href="safari-detail.html?id=ruaha-park">Ruaha</a>
+          <a href="safari-detail.html?id=mikumi-park">Mikumi</a>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/ernizaafrica/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.tripadvisor.com/Attraction_Review-g297913-d34578616-Reviews-Erniza_Africa_Safaris-Arusha_Arusha_Region.html"><svg width="24px" height="24px" style="
+              filter: brightness(0) invert(1);" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M20 6.009h-2.829C15.211 4.675 12.813 4 10 4s-5.212.675-7.171 2.009H0c.428.42.827 1.34.993 2.04A4.954 4.954 0 0 0 0 11.008c0 2.757 2.243 5 5 5a4.97 4.97 0 0 0 3.423-1.375L10 17l1.577-2.366A4.97 4.97 0 0 0 15 16.01c2.757 0 5-2.243 5-5 0-1.112-.377-2.13-.993-2.96.166-.7.565-1.62.993-2.04zm-15 8.4c-1.875 0-3.4-1.525-3.4-3.4s1.525-3.4 3.4-3.4 3.4 1.525 3.4 3.4-1.525 3.4-3.4 3.4zm5-3.4a5.008 5.008 0 0 0-4.009-4.9C7.195 5.704 8.53 5.5 10 5.5s2.805.204 4.009.61A5.008 5.008 0 0 0 10 11.008zm5 3.4c-1.875 0-3.4-1.525-3.4-3.4s1.525-3.4 3.4-3.4 3.4 1.525 3.4 3.4-1.525 3.4-3.4 3.4zM5 8.86c-1.185 0-2.15.964-2.15 2.15s.965 2.15 2.15 2.15 2.15-.964 2.15-2.15-.965-2.15-2.15-2.15zm0 2.791a.65.65 0 1 1 0-1.3.65.65 0 0 1 0 1.3zm10-2.791c-1.185 0-2.15.964-2.15 2.15s.965 2.15 2.15 2.15 2.15-.964 2.15-2.15-.965-2.15-2.15-2.15zm0 2.791a.65.65 0 1 1 0-1.3.65.65 0 0 1 0 1.3z"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© 2026 Erniza Africa Safaris. All rights reserved. | 100% Tanzanian Owned 🇹🇿 | Travel with Purpose</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+    <!-- Google Translate Scripts -->
+  <script type="text/javascript" src="js/translator.js"></script>
+
+  <!-- Load Google Translate API -->
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!-- Hidden element for Google Translate -->
+  <div id="google_translate_element_hidden" style="display: none;"></div>
+</body>
+</html>

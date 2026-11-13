@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Explore Tanzania's safari circuits - Northern, Southern, Western circuits and Zanzibar. Discover the best destinations for your African adventure.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#2c4a2e">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="color-scheme" content="light only">
+
+  <!-- Leaflet Map CSS (CDN) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin="" />
+
+  <title>Destinations | Erniza Africa Safaris</title>
+
+  <!-- Vercel Analytics -->
+    <script>
+      window.va = window.va || function () {
+        (window.vaq = window.vaq || []).push(arguments);
+      };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="shortcut icon" href="assets/Logo/ERNIZA LOGO GOLDEN BROWN WHITE BACKGROUND.png" type="image/x-icon" style="size: 48x48;">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/pages/destinations.css">
+
+</head>
+<body>
+   <!-- Language Switcher -->
+<div class="language-switcher" id="languageSwitcher">
+  <button class="lang-btn" onclick="toggleLanguageMenu()">
+    <i class="fas fa-globe"></i> <span id="currentLang">English</span> <i class="fas fa-chevron-down"></i>
+  </button>
+  <div class="language-menu" id="languageMenu">
+    <a href="#" onclick="changeLanguage('en'); return false;" class="active">🇬🇧 English</a>
+    <a href="#" onclick="changeLanguage('fr'); return false;">🇫🇷 Français</a>
+    <a href="#" onclick="changeLanguage('de'); return false;">🇩🇪 Deutsch</a>
+    <a href="#" onclick="changeLanguage('es'); return false;">🇪🇸 Español</a>
+    <a href="#" onclick="changeLanguage('it'); return false;">🇮🇹 Italiano</a>
+    <a href="#" onclick="changeLanguage('pt'); return false;">🇵🇹 Português</a>
+    <a href="#" onclick="changeLanguage('ru'); return false;">🇷🇺 Русский</a>
+    <a href="#" onclick="changeLanguage('zh-CN'); return false;">🇨🇳 中文 (简体)</a>
+    <a href="#" onclick="changeLanguage('ja'); return false;">🇯🇵 日本語</a>
+    <a href="#" onclick="changeLanguage('ko'); return false;">🇰🇷 한국어</a>
+    <a href="#" onclick="changeLanguage('ar'); return false;">🇸🇦 العربية</a>
+    <a href="#" onclick="changeLanguage('nl'); return false;">🇳🇱 Nederlands</a>
+  </div>
+</div>
+  <header style="background: var(--earth-green); padding: 10px 0;">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <img src="assets/Logo/ERNIZA LOGOTYPE BLOCK GOLDEN BROWN WHITE BACKGROUND.png" alt="" style="width: 110px;">
+        </a>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html">Home</a>
+          <a href="tanzania-safaris.html">Tanzania Safaris</a>
+          <a href="mountains.html">Mountains</a>
+          <a href="destinations.html" class="active">Destinations</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Destinations Hero -->
+    <section class="destinations-hero" style="background-image: url('assets/peter-thomas-At5UgqHfrc8-unsplash.jpg');">
+      <div class="container">
+        <h1>Explore Tanzania's Safari Circuits</h1>
+        <p style="font-size: 1.2rem; max-width: 600px; opacity: 0.95;">From the iconic Northern Circuit to the remote Western parks, the wild Southern reserves, and the tropical paradise of Zanzibar — discover where your adventure begins.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> <span>/</span>
+        <span>Destinations</span>
+      </div>
+
+      <!-- Circuit Cards -->
+      <div class="circuit-grid">
+        
+        <!-- Northern Circuit -->
+        <a href="northern-circuit.html" class="circuit-card fade-in">
+          <div class="circuit-card-image" style="background-image: url('assets/denice-alex-HrcPumKuhfM-unsplash.jpg');">
+            <div class="circuit-card-overlay">
+              <h2>Northern Circuit</h2>
+              <p class="circuit-tagline">Tanzania's Classic Safari Experience</p>
+            </div>
+          </div>
+          <div class="circuit-card-body">
+            <p>The most famous safari circuit in Africa. Home to the Serengeti, Ngorongoro Crater, and the Great Migration. Perfect for first-time visitors and wildlife enthusiasts wanting to see the Big Five.</p>
+            <div class="circuit-highlights">
+              <span class="circuit-highlight-tag"><i class="fas fa-paw"></i> The Big Five</span>
+              <span class="circuit-highlight-tag"><i class="fas fa-binoculars"></i> Great Migration</span>
+              <span class="circuit-highlight-tag"><i class="fas fa-mountain"></i> Ngorongoro Crater</span>
+              <span class="circuit-highlight-tag"><i class="fas fa-camera"></i> Iconic Landscapes</span>
+            </div>
+            <div class="circuit-parks">
+              <div class="park-mini">
+                <i class="fas fa-tree"></i>
+                <span>Serengeti</span>
+              </div>
+              <div class="park-mini">
+                <i class="fas fa-mountain"></i>
+                <span>Ngorongoro</span>
+              </div>
+              <div class="park-mini">
+                <i class="fas fa-leaf"></i>
+                <span>Tarangire</span>
+              </div>
+              <div class="park-mini">
+                <i class="fas fa-water"></i>
+                <span>Lake Manyara</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Southern Circuit -->
+        <a href="southern-circuit.html" class="circuit-card fade-in">
+          <div class="circuit-card-image" style="background-image: url('assets/selous/aron-marinelli-ncFC6q5Md8U-unsplash.jpg');">
+            <div class="circuit-card-overlay">
+              <h2>Southern Circuit</h2>
+              <p class="circuit-tagline">Wild, Remote & Untamed</p>
+            </div>
+          </div>
+          <div class="circuit-card-body">
+            <p>For those seeking true wilderness away from the crowds. The Southern Circuit offers vast, untouched landscapes, boat safaris, walking safaris, and some of Africa's best predator viewing.</p>
+            <div class="circuit-highlights">
+              <span class="circuit-highlight-tag"><i class="fas fa-water"></i> Boat Safaris</span>
+              <span class="circuit-highlight-tag"><i class="fas fa-hiking"></i> Walking Safaris</span>
+              <span class="circuit-highlight-tag"><i class="fas fa-paw"></i> Wild Dogs</span>
+              <span class="circuit-highlight-tag"><i class="fas fa-tree"></i> Remote Wilderness</span>
+            </div>
+            <div class="circuit-parks">
+              <div class="park-mini">
+                <i class="fas fa-water"></i>
+                <span>Selous (Nyerere)</span>
+              </div>
+              <div class="park-mini">
+                <i class="fas fa-mountain"></i>
+                <span>Ruaha</span>
+              </div>
+              <div class="park-mini">
+                <i class="fas fa-leaf"></i>
+                <span>Mikumi</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Western Circuit -->
+        <a href="western-circuit.html" class="circuit-card fade-in">
+          <div class="circuit-card-image" style="background-image: url('assets/katavi/large_Hippos_Katavi_17_8d470047c1.jpg');">
+            <div class="circuit-card-overlay">
+              <h2>Western Circuit</h2>
+              <p class="circuit-tagline">Chimpanzees & Remote Wilderness</p>
+            </div>
+          </div>
+          <div class="circuit-card-body">
+            <p>Tanzania's best-kept secret. The Western Circuit combines the wildlife-rich Katavi plains with chimpanzee trekking in the Mahale Mountains on the shores of Lake Tanganyika.</p>
+            <div class="circuit-highlights">
+              <span class="circuit-highlight-tag"><i class="fas fa-paw"></i> Chimpanzee Trekking</span>
+              <span class="circuit-highlight-tag"><i class="fas fa-water"></i> Lake Tanganyika</span>
+              <span class="circuit-highlight-tag"><i class="fas fa-hippo"></i> Massive Hippo Pods</span>
+              <span class="circuit-highlight-tag"><i class="fas fa-mountain"></i> Mahale Mountains</span>
+            </div>
+            <div class="circuit-parks">
+              <div class="park-mini">
+                <i class="fas fa-leaf"></i>
+                <span>Katavi</span>
+              </div>
+              <div class="park-mini">
+                <i class="fas fa-mountain"></i>
+                <span>Mahale</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Zanzibar -->
+        <a href="zanzibar.html" class="circuit-card fade-in">
+          <div class="circuit-card-image" style="background-image: url('assets/Zanzibar/olga-budko-hl0W9gS0C6k-unsplash.jpg');">
+            <div class="circuit-card-overlay">
+              <h2>Zanzibar Archipelago</h2>
+              <p class="circuit-tagline">Tropical Paradise & Spice Islands</p>
+            </div>
+          </div>
+          <div class="circuit-card-body">
+            <p>The perfect complement to your safari. White sand beaches, crystal-clear turquoise waters, historic Stone Town, and aromatic spice farms. Ideal for relaxation, diving, and cultural experiences.</p>
+            <div class="circuit-highlights">
+              <span class="circuit-highlight-tag"><i class="fas fa-umbrella-beach"></i> Pristine Beaches</span>
+              <span class="circuit-highlight-tag"><i class="fas fa-fish"></i> World-Class Diving</span>
+              <span class="circuit-highlight-tag"><i class="fas fa-landmark"></i> Stone Town</span>
+              <span class="circuit-highlight-tag"><i class="fas fa-leaf"></i> Spice Tours</span>
+            </div>
+            <div class="circuit-parks">
+              <div class="park-mini">
+                <i class="fas fa-umbrella-beach"></i>
+                <span>Nungwi</span>
+              </div>
+              <div class="park-mini">
+                <i class="fas fa-water"></i>
+                <span>Kendwa</span>
+              </div>
+              <div class="park-mini">
+                <i class="fas fa-landmark"></i>
+                <span>Stone Town</span>
+              </div>
+              <div class="park-mini">
+                <i class="fas fa-fish"></i>
+                <span>Mnemba Atoll</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Map Section -->
+      <div class="circuits-map-wrapper fade-in">
+        <div class="circuits-map-header">
+          <h2>Tanzania Safari Circuits Map</h2>
+          <p>Click a marker to explore each circuit</p>
+        </div>
+
+        <div id="circuitsMap"></div>
+
+        <!-- Legend -->
+        <div class="circuits-legend">
+          <div class="circuits-legend-item">
+            <span class="circuits-legend-dot" style="background: #e74c3c;"></span>
+            Northern Circuit
+          </div>
+          <div class="circuits-legend-item">
+            <span class="circuits-legend-dot" style="background: #3498db;"></span>
+            Southern Circuit
+          </div>
+          <div class="circuits-legend-item">
+            <span class="circuits-legend-dot" style="background: #2ecc71;"></span>
+            Western Circuit
+          </div>
+          <div class="circuits-legend-item">
+            <span class="circuits-legend-dot" style="background: #f39c12;"></span>
+            Zanzibar Archipelago
+          </div>
+        </div>
+      </div>
+
+      <!-- Best Time to Visit -->
+      <div class="fade-in">
+        <h2 style="color: var(--earth-green); text-align: center; margin-bottom: 30px;">When to Visit Each Circuit</h2>
+        <div class="season-grid">
+          <div class="season-card green">
+            <i class="fas fa-sun"></i>
+            <h4>Northern Circuit</h4>
+            <p><strong>Best: June - October</strong></p>
+            <p style="color: #555;">Dry season, best wildlife viewing. Migration river crossings July-September.</p>
+            <p style="color: #555; margin-top: 10px;"><strong>Also good:</strong> January - March (calving season)</p>
+          </div>
+          <div class="season-card yellow">
+            <i class="fas fa-cloud-sun"></i>
+            <h4>Southern Circuit</h4>
+            <p><strong>Best: June - October</strong></p>
+            <p style="color: #555;">Dry season for best game viewing. Green season (Jan-Mar) offers lush landscapes.</p>
+            <p style="color: #555; margin-top: 10px;">Accessible year-round</p>
+          </div>
+          <div class="season-card blue">
+            <i class="fas fa-cloud-rain"></i>
+            <h4>Western Circuit</h4>
+            <p><strong>Best: July - October</strong></p>
+            <p style="color: #555;">Dry season essential for Katavi. Chimpanzee trekking best in dry months.</p>
+            <p style="color: #555; margin-top: 10px;">Limited access Nov-May</p>
+          </div>
+          <div class="season-card green">
+            <i class="fas fa-umbrella-beach"></i>
+            <h4>Zanzibar</h4>
+            <p><strong>Best: June - October</strong></p>
+            <p style="color: #555;">Dry, sunny weather. Perfect beach conditions. Great visibility for diving.</p>
+            <p style="color: #555; margin-top: 10px;"><strong>Also good:</strong> December - February</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-section fade-in">
+        <h2>Not Sure Which Circuit to Choose?</h2>
+        <p style="margin-bottom: 25px;">Let our experts help you design the perfect itinerary combining the best of Tanzania's safari circuits.</p>
+        <a href="contact.html" class="btn btn-gold btn-lg">
+          <i class="fas fa-compass"></i> Get Personalized Advice
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4><i class="fas fa-paw" style="color: var(--savanna-gold);"></i> Erniza Africa Safaris</h4>
+          <p><i class="fas fa-map-marker-alt"></i> Arusha, Tanzania</p>
+          <a href="tel:+255759049127"><p><i class="fas fa-phone"></i> +255 776 749 127</p></a>
+          <a href="mailto: info@ernizaafricasafaris.com"><p><i class="fas fa-envelope"></i> info@ernizaafricasafaris.com</p></a>
+        </div>
+        <div class="footer-col">
+          <h4>Safari Circuits</h4>
+          <a href="northern-circuit.html">Northern Circuit</a>
+          <a href="southern-circuit.html">Southern Circuit</a>
+          <a href="western-circuit.html">Western Circuit</a>
+          <a href="zanzibar.html">Zanzibar</a>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="tanzania-safaris.html">All Safaris</a>
+          <a href="mountains.html">Mountain Treks</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/ernizaafrica/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.tripadvisor.com/Attraction_Review-g297913-d34578616-Reviews-Erniza_Africa_Safaris-Arusha_Arusha_Region.html"><svg width="24px" height="24px" style="
+              filter: brightness(0) invert(1);" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M20 6.009h-2.829C15.211 4.675 12.813 4 10 4s-5.212.675-7.171 2.009H0c.428.42.827 1.34.993 2.04A4.954 4.954 0 0 0 0 11.008c0 2.757 2.243 5 5 5a4.97 4.97 0 0 0 3.423-1.375L10 17l1.577-2.366A4.97 4.97 0 0 0 15 16.01c2.757 0 5-2.243 5-5 0-1.112-.377-2.13-.993-2.96.166-.7.565-1.62.993-2.04zm-15 8.4c-1.875 0-3.4-1.525-3.4-3.4s1.525-3.4 3.4-3.4 3.4 1.525 3.4 3.4-1.525 3.4-3.4 3.4zm5-3.4a5.008 5.008 0 0 0-4.009-4.9C7.195 5.704 8.53 5.5 10 5.5s2.805.204 4.009.61A5.008 5.008 0 0 0 10 11.008zm5 3.4c-1.875 0-3.4-1.525-3.4-3.4s1.525-3.4 3.4-3.4 3.4 1.525 3.4 3.4-1.525 3.4-3.4 3.4zM5 8.86c-1.185 0-2.15.964-2.15 2.15s.965 2.15 2.15 2.15 2.15-.964 2.15-2.15-.965-2.15-2.15-2.15zm0 2.791a.65.65 0 1 1 0-1.3.65.65 0 0 1 0 1.3zm10-2.791c-1.185 0-2.15.964-2.15 2.15s.965 2.15 2.15 2.15 2.15-.964 2.15-2.15-.965-2.15-2.15-2.15zm0 2.791a.65.65 0 1 1 0-1.3.65.65 0 0 1 0 1.3z"/></svg></a>
+            <a href="https://wa.me/255776049127" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© 2026 Erniza Africa Safaris. All rights reserved. | Proudly Tanzanian 🇹🇿 | Karibu sana!</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <!-- Google Translate Scripts -->
+  <script type="text/javascript" src="js/translator.js"></script>
+
+  <!-- Load Google Translate API -->
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!-- Leaflet Map JS (CDN) -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+          crossorigin=""></script>
+  
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const mapEl = document.getElementById('circuitsMap');
+    if (!mapEl || typeof L === 'undefined') return;
+
+    // Center the map on Tanzania
+    const map = L.map('circuitsMap').setView([-6.5, 35], 6);
+
+    // OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Helper to create a colored pin
+    function createColorIcon(color) {
+      return L.divIcon({
+        className: '',
+        html: `
+          <div style="
+            background: ${color};
+            width: 22px;
+            height: 22px;
+            border-radius: 50% 50% 50% 0;
+            transform: rotate(-45deg);
+            border: 3px solid white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+          "></div>
+        `,
+        iconSize: [22, 22],
+        iconAnchor: [11, 22],
+        popupAnchor: [0, -20]
+      });
+    }
+
+    // Circuit data
+    const circuits = [
+      {
+        name: 'Northern Circuit',
+        color: '#e74c3c',
+        coords: [-3.1, 35.5],
+        parks: 'Serengeti · Ngorongoro · Tarangire · Manyara',
+        link: 'northern-circuit.html'
+      },
+      {
+        name: 'Southern Circuit',
+        color: '#3498db',
+        coords: [-8.5, 35.5],
+        parks: 'Selous · Ruaha · Mikumi',
+        link: 'southern-circuit.html'
+      },
+      {
+        name: 'Western Circuit',
+        color: '#2ecc71',
+        coords: [-6.5, 30.5],
+        parks: 'Katavi · Mahale · Gombe',
+        link: 'western-circuit.html'
+      },
+      {
+        name: 'Zanzibar Archipelago',
+        color: '#f39c12',
+        coords: [-6.15, 39.2],
+        parks: 'Unguja · Pemba · Mafia',
+        link: 'zanzibar.html'
+      }
+    ];
+
+    // Add markers
+    circuits.forEach(function (c) {
+      L.marker(c.coords, { icon: createColorIcon(c.color) })
+        .addTo(map)
+        .bindPopup(
+          '<strong>' + c.name + '</strong>' +
+          '<span style="color:#6f6f5e;font-size:0.85rem;">' + c.parks + '</span><br>' +
+          '<a href="' + c.link + '">Explore circuit →</a>'
+        );
+    });
+
+    // Fit map to all markers
+    const bounds = L.latLngBounds(circuits.map(c => c.coords));
+    map.fitBounds(bounds, { padding: [40, 40] });
+
+    // Fix map sizing after fonts load / page renders
+    setTimeout(function () { map.invalidateSize(); }, 300);
+  });
+</script>
+
+  <!-- Hidden element for Google Translate -->
+  <div id="google_translate_element_hidden" style="display: none;"></div>
+</body>
+</html>

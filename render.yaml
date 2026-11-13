@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: erniza-tms-demo
+    runtime: docker
+    plan: free
+    region: frankfurt
+    dockerfilePath: ./tms/Dockerfile
+    dockerContext: ./tms
+    healthCheckPath: /api/health
+    autoDeployTrigger: commit
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: LOG_LEVEL
+        value: info

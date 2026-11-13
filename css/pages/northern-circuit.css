@@ -1,0 +1,210 @@
+.north-hero {
+      background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45)), 
+                  url('https://images.unsplash.com/photo-1516426122078-c21e7db2494d?q=80&w=1470&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center 40%;
+      min-height: 55vh;
+      display: flex;
+      align-items: center;
+      color: white;
+      border-radius: 0 0 50px 50px;
+      margin-bottom: 50px;
+    }
+
+    .north-hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .park-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+
+    .park-card {
+      background: white;
+      border-radius: 25px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition-smooth);
+    }
+
+    .park-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .park-card-image {
+      height: 250px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .park-card-badge {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      z-index: 5;
+    }
+
+    .badge-unesco {
+      background: #1a5276;
+      color: white;
+    }
+
+    .badge-iconic {
+      background: var(--savanna-gold);
+      color: #1e1e1e;
+    }
+
+    .badge-hidden {
+      background: var(--earth-green);
+      color: white;
+    }
+
+    .park-card-body {
+      padding: 25px;
+    }
+
+    .park-card-body h3 {
+      font-size: 1.6rem;
+      color: var(--deep-brown);
+      margin-bottom: 12px;
+    }
+
+    .park-card-body p {
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .park-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .park-feature {
+      padding: 6px 14px;
+      background: var(--gray-light);
+      border-radius: 15px;
+      font-size: 0.85rem;
+      color: var(--deep-brown);
+    }
+
+    .park-feature i {
+      color: var(--savanna-gold);
+      margin-right: 5px;
+    }
+
+    .wildlife-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 15px 0;
+    }
+
+    .wildlife-tag {
+      padding: 5px 12px;
+      background: #f0f0e8;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      color: #555;
+    }
+
+    .comparison-section {
+      background: white;
+      border-radius: 30px;
+      padding: 40px;
+      margin: 50px 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .comparison-section h2 {
+      color: var(--earth-green);
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow-x: auto;
+      display: block;
+    }
+
+    .comparison-table table {
+      width: 100%;
+      min-width: 600px;
+    }
+
+    .comparison-table th {
+      background: var(--earth-green);
+      color: white;
+      padding: 15px;
+      text-align: left;
+    }
+
+    .comparison-table td {
+      padding: 15px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .comparison-table tr:hover td {
+      background: var(--gray-light);
+    }
+
+    .safari-ideas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin: 40px 0;
+    }
+
+    .safari-idea-card {
+      background: white;
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: var(--shadow-sm);
+      border-left: 4px solid var(--savanna-gold);
+      transition: var(--transition-smooth);
+    }
+
+    .safari-idea-card:hover {
+      transform: translateX(5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .safari-idea-card h4 {
+      color: var(--earth-green);
+      margin-bottom: 8px;
+    }
+
+    .safari-idea-card .duration {
+      color: var(--savanna-gold);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .north-hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .park-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .comparison-section {
+        padding: 25px 20px;
+      }
+    }

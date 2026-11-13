@@ -1,0 +1,331 @@
+.zanz-hero {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), 
+                url('https://images.unsplash.com/photo-1539367626448-ec43e4e3e6f3?q=80&w=1470&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center 60%;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    border-radius: 0 0 50px 50px;
+    margin-bottom: 50px;
+}
+
+.zanz-hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.zanz-hero .tagline {
+    font-size: 1.3rem;
+    opacity: 0.95;
+}
+
+.highlights-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 30px 0 50px;  /* Changed from margin: -30px 0 50px to margin: 30px 0 50px */
+    position: relative;
+    z-index: 1;  /* Changed from z-index: 10 to z-index: 1 */
+}
+
+.highlight-item-zanz {
+    background: white;
+    padding: 25px 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-smooth);
+}
+
+.highlight-item-zanz:hover {
+    transform: translateY(-5px);
+}
+
+.highlight-item-zanz i {
+    font-size: 2rem;
+    color: var(--savanna-gold);
+    margin-bottom: 10px;
+}
+
+.highlight-item-zanz h3 {
+    color: var(--earth-green);
+    font-size: 1rem;
+}
+
+.section-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px;
+}
+
+.section-intro h2 {
+    color: var(--earth-green);
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.section-intro p {
+    color: #555;
+    line-height: 1.8;
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.dest-card {
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-smooth);
+}
+
+.dest-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.dest-card-image {
+    height: 280px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.dest-card-tag {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: white;
+}
+
+.tag-beach { background: #3498db; }
+.tag-culture { background: #8B4513; }
+.tag-adventure { background: #e74c3c; }
+.tag-relax { background: #2ecc71; }
+
+.dest-card-body {
+    padding: 25px;
+}
+
+.dest-card-body h3 {
+    font-size: 1.5rem;
+    color: var(--deep-brown);
+    margin-bottom: 10px;
+}
+
+.dest-card-body p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.dest-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.dest-feature-tag {
+    padding: 5px 12px;
+    background: var(--gray-light);
+    border-radius: 15px;
+    font-size: 0.8rem;
+    color: #555;
+}
+
+.dest-feature-tag i {
+    color: var(--savanna-gold);
+    margin-right: 4px;
+}
+
+.activities-section {
+    margin: 60px 0;
+}
+
+.activities-section h2 {
+    color: var(--earth-green);
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.activities-grid-zanz {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.activity-card-zanz {
+    text-align: center;
+    padding: 30px 20px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-smooth);
+}
+
+.activity-card-zanz:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.activity-card-zanz .icon-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--gray-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    transition: var(--transition-smooth);
+}
+
+.activity-card-zanz:hover .icon-circle {
+    background: var(--savanna-gold);
+}
+
+.activity-card-zanz .icon-circle i {
+    font-size: 1.8rem;
+    color: var(--earth-green);
+}
+
+.activity-card-zanz:hover .icon-circle i {
+    color: white;
+}
+
+.activity-card-zanz h4 {
+    color: var(--deep-brown);
+    margin-bottom: 8px;
+}
+
+.activity-card-zanz p {
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.hotel-preview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin: 40px 0;
+}
+
+.hotel-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.hotel-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.hotel-card-body {
+    padding: 20px;
+}
+
+.hotel-card-body h4 {
+    color: var(--deep-brown);
+    margin-bottom: 5px;
+}
+
+.hotel-card-body .stars {
+    color: var(--savanna-gold);
+    margin-bottom: 8px;
+}
+
+.hotel-card-body p {
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.hotel-card-body .price-from {
+    color: var(--savanna-gold);
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.combo-section {
+    background: linear-gradient(135deg, #1a5276, #2c4a2e);
+    color: white;
+    padding: 50px 40px;
+    border-radius: 40px;
+    margin: 60px 0;
+    text-align: center;
+}
+
+.combo-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.combo-section p {
+    max-width: 600px;
+    margin: 0 auto 25px;
+    opacity: 0.95;
+}
+
+.combo-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.combo-option {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 20px;
+    text-align: left;
+}
+
+.combo-option h4 {
+    color: var(--savanna-gold);
+    margin-bottom: 10px;
+}
+
+.combo-option ul {
+    list-style: none;
+}
+
+.combo-option li {
+    padding: 5px 0;
+    font-size: 0.95rem;
+}
+
+.combo-option li i {
+    color: var(--savanna-gold);
+    margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+    .zanz-hero h1 {
+    font-size: 2.5rem;
+    }
+
+    .destinations-grid {
+    grid-template-columns: 1fr;
+    }
+
+    .combo-section {
+    padding: 30px 20px;
+    }
+}

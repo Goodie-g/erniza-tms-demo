@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Local environment and secrets
+.env
+**/.env
+.env.*
+!.env.example
+
+# Logs and OS files
+*.log
+.DS_Store
+Thumbs.db
+
+# Note: tms/apps/api/.data and tms/apps/api/uploads are intentionally NOT ignored.
+# They contain the seeded demo database and media baked into the Docker image.

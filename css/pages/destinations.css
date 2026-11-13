@@ -1,0 +1,348 @@
+.destinations-hero {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), 
+                url('https://images.unsplash.com/photo-1516426122078-c21e7db2494d?q=80&w=1470&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    border-radius: 0 0 50px 50px;
+    margin-bottom: 60px;
+}
+
+.destinations-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.circuit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 35px;
+    margin-bottom: 60px;
+}
+
+.circuit-card {
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-smooth);
+    cursor: pointer;
+    display: block;
+    color: inherit;
+}
+
+.circuit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+}
+
+.circuit-card-image {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: transform 0.6s ease;
+}
+
+.circuit-card:hover .circuit-card-image {
+    transform: scale(1.05);
+}
+
+.circuit-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 40px 30px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.85));
+    color: white;
+}
+
+.circuit-card-overlay h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.circuit-card-overlay .circuit-tagline {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.circuit-card-body {
+    padding: 30px;
+}
+
+.circuit-card-body p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.circuit-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.circuit-highlight-tag {
+    padding: 8px 16px;
+    background: var(--gray-light);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--deep-brown);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.circuit-highlight-tag i {
+    color: var(--savanna-gold);
+}
+
+.circuit-parks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.park-mini {
+    text-align: center;
+    flex: 1;
+    min-width: 80px;
+}
+
+.park-mini i {
+    font-size: 1.5rem;
+    color: var(--savanna-gold);
+    margin-bottom: 5px;
+    display: block;
+}
+
+.park-mini span {
+    font-size: 0.8rem;
+    color: var(--gray-medium);
+}
+
+.map-section {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 40px;
+    margin: 60px 0;
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+}
+
+.map-placeholder {
+    background: var(--gray-light);
+    border-radius: 20px;
+    padding: 60px 20px;
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.map-placeholder i {
+    font-size: 5rem;
+    color: var(--savanna-gold);
+    margin-bottom: 20px;
+}
+
+.map-placeholder p {
+    color: var(--gray-medium);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.region-dots {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.region-dot {
+    text-align: center;
+}
+
+.region-dot .dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.dot.north { background: #e74c3c; }
+.dot.south { background: #3498db; }
+.dot.west { background: #2ecc71; }
+.dot.zanzibar { background: #f39c12; }
+
+.season-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin: 40px 0;
+}
+
+.season-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+}
+
+.season-card i {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.season-card h4 {
+    color: var(--earth-green);
+    margin-bottom: 10px;
+}
+
+.season-card.green i { color: #2ecc71; }
+.season-card.yellow i { color: #f39c12; }
+.season-card.blue i { color: #3498db; }
+
+@media (max-width: 768px) {
+    .destinations-hero h1 {
+    font-size: 2.2rem;
+    }
+
+    .circuit-grid {
+    grid-template-columns: 1fr;
+    }
+
+    .circuit-card-image {
+    height: 220px;
+    }
+
+    .map-section {
+    padding: 25px 20px;
+    }
+}
+
+/* ===== Circuits Map ===== */
+.circuits-map-wrapper {
+  background: white;
+  border-radius: 24px;
+  padding: 30px;
+  margin: 60px 0;
+  box-shadow: 0 10px 25px -10px rgba(0,0,0,0.08);
+}
+
+.circuits-map-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.circuits-map-header h2 {
+  color: var(--earth-green);
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.circuits-map-header p {
+  color: var(--gray-medium);
+}
+
+#circuitsMap {
+  height: 450px;
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Fix Leaflet z-index conflicting with sticky/fixed headers */
+.leaflet-container {
+  z-index: 0;
+  font-family: inherit;
+}
+
+/* Style Leaflet popups to match site theme */
+.leaflet-popup-content-wrapper {
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.leaflet-popup-content {
+  margin: 14px 18px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: var(--dark-text);
+  line-height: 1.5;
+}
+
+.leaflet-popup-content strong {
+  color: var(--earth-green);
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.leaflet-popup-content a {
+  color: var(--savanna-gold);
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.leaflet-popup-content a:hover {
+  text-decoration: underline;
+}
+
+/* Legend */
+.circuits-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 22px;
+}
+
+.circuits-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--deep-brown);
+  font-weight: 500;
+}
+
+.circuits-legend-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  #circuitsMap {
+    height: 350px;
+  }
+  .circuits-map-wrapper {
+    padding: 20px;
+  }
+  .circuits-map-header h2 {
+    font-size: 1.5rem;
+  }
+  .circuits-legend {
+    gap: 15px;
+  }
+  .circuits-legend-item {
+    font-size: 0.85rem;
+  }
+}

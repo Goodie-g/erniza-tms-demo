@@ -1,0 +1,22 @@
+node_modules
+**/node_modules
+
+# Source, tests and build tooling are not needed for the prebuilt runtime.
+**/*.ts
+**/*.tsx
+**/*.map
+**/*.log
+
+apps/api/.env
+apps/api/db
+apps/api/assets
+apps/api/.data/pgdata/postmaster.pid
+apps/api/.data/pgdata/.s.PGSQL.*
+
+deploy/README.md
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+.git
+.gitignore

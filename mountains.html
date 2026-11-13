@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Climb Africa's highest peaks - Mount Kilimanjaro and Mount Meru with expert guides. Multiple routes available for all skill levels.">
+  <title>Mountain Treks | Erniza Africa Safaris</title>
+
+  <!-- Vercel Analytics -->
+    <script>
+      window.va = window.va || function () {
+        (window.vaq = window.vaq || []).push(arguments);
+      };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="shortcut icon" href="assets/Logo/ERNIZA LOGO GOLDEN BROWN WHITE BACKGROUND.png" type="image/x-icon" style="size: 48x48;">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/pages/mountains.css">
+
+</head>
+<body>
+   <!-- Language Switcher -->
+  <div class="language-switcher" id="languageSwitcher">
+    <button class="lang-btn" onclick="toggleLanguageMenu()">
+      <i class="fas fa-globe"></i> <span id="currentLang">English</span> <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="language-menu" id="languageMenu">
+      <a href="#" onclick="changeLanguage('en'); return false;" class="active">🇬🇧 English</a>
+      <a href="#" onclick="changeLanguage('fr'); return false;">🇫🇷 Français</a>
+      <a href="#" onclick="changeLanguage('de'); return false;">🇩🇪 Deutsch</a>
+      <a href="#" onclick="changeLanguage('es'); return false;">🇪🇸 Español</a>
+      <a href="#" onclick="changeLanguage('it'); return false;">🇮🇹 Italiano</a>
+      <a href="#" onclick="changeLanguage('pt'); return false;">🇵🇹 Português</a>
+      <a href="#" onclick="changeLanguage('ru'); return false;">🇷🇺 Русский</a>
+      <a href="#" onclick="changeLanguage('zh-CN'); return false;">🇨🇳 中文 (简体)</a>
+      <a href="#" onclick="changeLanguage('ja'); return false;">🇯🇵 日本語</a>
+      <a href="#" onclick="changeLanguage('ko'); return false;">🇰🇷 한국어</a>
+      <a href="#" onclick="changeLanguage('ar'); return false;">🇸🇦 العربية</a>
+      <a href="#" onclick="changeLanguage('nl'); return false;">🇳🇱 Nederlands</a>
+    </div>
+  </div>
+  <header style="background: var(--earth-green); padding: 10px 0;">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <img src="assets/Logo/ERNIZA LOGOTYPE BLOCK GOLDEN BROWN WHITE BACKGROUND.png" alt="" style="width: 110px;">
+        </a>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html">Home</a>
+          <a href="tanzania-safaris.html">Tanzania Safaris</a>
+          <a href="mountains.html" class="active">Mountains</a>
+          <a href="destinations.html">Destinations</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Mountains Hero -->
+    <section class="mountains-hero" style="background-image: url('assets/meru/k15-photos-_21baKUW_cw-unsplash.jpg')">
+      <div class="container" >
+        <div class="mountains-hero-content" >
+          <h1>Conquer Africa's Peaks</h1>
+          <p>Stand on the roof of Africa. Whether you choose the mighty Kilimanjaro or the majestic Mount Meru, our expert guides will lead you to the summit safely and successfully.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <!-- Quick Stats -->
+      <div class="quick-stats fade-in" style="margin: -30px 0 60px;">
+        <div class="quick-stat">
+          <h3><i class="fas fa-mountain" style="color: var(--savanna-gold); margin-right: 10px;"></i>5,895m</h3>
+          <p>Kilimanjaro Summit</p>
+        </div>
+        <div class="quick-stat">
+          <h3><i class="fas fa-mountain" style="color: var(--savanna-gold); margin-right: 10px;"></i>4,566m</h3>
+          <p>Mount Meru Summit</p>
+        </div>
+        <div class="quick-stat">
+          <h3><i class="fas fa-route" style="color: var(--savanna-gold); margin-right: 10px;"></i>5</h3>
+          <p>Climbing Routes</p>
+        </div>
+        <div class="quick-stat">
+          <h3><i class="fas fa-trophy" style="color: var(--savanna-gold); margin-right: 10px;"></i>96%</h3>
+          <p>Summit Success Rate</p>
+        </div>
+      </div>
+
+      <!-- Mountain Cards -->
+      <div class="mountain-cards">
+        <!-- Kilimanjaro Card -->
+        <a href="kilimanjaro.html" class="mountain-card-large fade-in">
+          <div class="mountain-card-image" style="background-image: url('assets/klm/stephan-bechert-xQWelDCacZE-unsplash.jpg');">
+            <div class="mountain-card-overlay">
+              <h2>Mount Kilimanjaro</h2>
+              <p class="elevation"><i class="fas fa-arrow-up"></i> 5,895m / 19,341ft</p>
+              <span class="badge" style="background: var(--savanna-gold); color: #1e1e1e; position: static; display: inline-block; margin-top: 10px;">Africa's Highest Peak</span>
+            </div>
+          </div>
+          <div class="mountain-card-body">
+            <div class="mountain-stats">
+              <div class="mountain-stat">
+                <i class="fas fa-calendar-alt"></i>
+                <strong>5-9 Days</strong>
+                <span>Duration</span>
+              </div>
+              <div class="mountain-stat">
+                <i class="fas fa-route"></i>
+                <strong>6 Routes</strong>
+                <span>Options</span>
+              </div>
+              <div class="mountain-stat">
+                <i class="fas fa-star"></i>
+                <strong>95%</strong>
+                <span>Success Rate</span>
+              </div>
+            </div>
+            <p style="color: #555; margin-bottom: 20px;">The world's highest free-standing mountain offers multiple routes to the summit. From the popular Marangu Route to the scenic Lemosho Route, choose your path to Uhuru Peak.</p>
+            <div class="route-list">
+              <div class="route-item">
+                <div class="route-info">
+                  <h4>Marangu Route</h4>
+                  <span><i class="far fa-clock"></i> 5-6 Days</span>
+                </div>
+                <div class="route-difficulty">
+                  <span class="difficulty moderate">Moderate</span>
+                  <div class="price">From $1,760</div>
+                </div>
+              </div>
+              <div class="route-item">
+                <div class="route-info">
+                  <h4>Machame Route</h4>
+                  <span><i class="far fa-clock"></i> 6-7 Days</span>
+                </div>
+                <div class="route-difficulty">
+                  <span class="difficulty challenging">Challenging</span>
+                  <div class="price">From $2,055</div>
+                </div>
+              </div>
+              <div class="route-item">
+                <div class="route-info">
+                  <h4>Lemosho Route</h4>
+                  <span><i class="far fa-clock"></i> 7-8 Days</span>
+                </div>
+                <div class="route-difficulty">
+                  <span class="difficulty moderate">Moderate</span>
+                  <div class="price">From $2,235</div>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-primary" style="width: 100%; margin-top: 15px;">
+              View All Kilimanjaro Routes <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </a>
+
+        <!-- Mount Meru Card -->
+        <a href="meru.html" class="mountain-card-large fade-in">
+          <div class="mountain-card-image" style="background-image: url('assets/meru/k15-photos-_21baKUW_cw-unsplash.jpg');">
+            <div class="mountain-card-overlay">
+              <h2>Mount Meru</h2>
+              <p class="elevation"><i class="fas fa-arrow-up"></i> 4,566m / 14,980ft</p>
+              <span class="badge" style="background: var(--savanna-gold); color: #1e1e1e; position: static; display: inline-block; margin-top: 10px;">Tanzania's Second Peak</span>
+            </div>
+          </div>
+          <div class="mountain-card-body">
+            <div class="mountain-stats">
+              <div class="mountain-stat">
+                <i class="fas fa-calendar-alt"></i>
+                <strong>3-4 Days</strong>
+                <span>Duration</span>
+              </div>
+              <div class="mountain-stat">
+                <i class="fas fa-route"></i>
+                <strong>1 Route</strong>
+                <span>Momella Route</span>
+              </div>
+              <div class="mountain-stat">
+                <i class="fas fa-star"></i>
+                <strong>98%</strong>
+                <span>Success Rate</span>
+              </div>
+            </div>
+            <p style="color: #555; margin-bottom: 20px;">Often overlooked but incredibly rewarding, Mount Meru offers stunning scenery, diverse wildlife on the lower slopes, and spectacular views of Kilimanjaro from the summit.</p>
+            <div class="route-list">
+              <div class="route-item">
+                <div class="route-info">
+                  <h4>Momella Route</h4>
+                  <span><i class="far fa-clock"></i> 3-4 Days</span>
+                </div>
+                <div class="route-difficulty">
+                  <span class="difficulty moderate">Moderate</span>
+                  <!-- <div class="price">From $1,200</div> -->
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-primary" style="width: 100%; margin-top: 15px;">
+              View Mount Meru Details <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </a>
+      </div>
+
+      <!-- Comparison Table -->
+      <div class="fade-in">
+        <h2 style="color: var(--earth-green); text-align: center; margin-bottom: 30px;">Mountain Comparison</h2>
+        <div class="comparison-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Kilimanjaro</th>
+                <th>Mount Meru</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Elevation</strong></td>
+                <td>5,895m (19,341ft)</td>
+                <td>4,566m (14,980ft)</td>
+              </tr>
+              <tr>
+                <td><strong>Duration</strong></td>
+                <td>5-9 days</td>
+                <td>3-4 days</td>
+              </tr>
+              <tr>
+                <td><strong>Difficulty</strong></td>
+                <td>Moderate to Challenging</td>
+                <td>Moderate</td>
+              </tr>
+              <tr>
+                <td><strong>Routes Available</strong></td>
+                <td>6 main routes</td>
+                <td>1 main route</td>
+              </tr>
+              <tr>
+                <td><strong>Summit Success Rate</strong></td>
+                <td>85-95% (route dependent)</td>
+                <td>95-98%</td>
+              </tr>
+              <tr>
+                <td><strong>Best Season</strong></td>
+                <td>Jan-Mar, Jun-Oct</td>
+                <td>Jun-Feb</td>
+              </tr>
+              <tr>
+                <td><strong>Wildlife Viewing</strong></td>
+                <td><i class="fas fa-check check"></i> Limited</td>
+                <td><i class="fas fa-check check"></i> Excellent on lower slopes</td>
+              </tr>
+              <tr>
+                <td><strong>Acclimatization</strong></td>
+                <td>Critical (longer routes better)</td>
+                <td>Good preparation for Kili</td>
+              </tr>
+              <!-- <tr>
+                <td><strong>Starting Price</strong></td>
+                <td style="color: var(--savanna-gold); font-weight: 700;">$2,200</td>
+                <td style="color: var(--savanna-gold); font-weight: 700;">$1,200</td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Why Climb With Us -->
+      <div class="features-grid fade-in">
+        <div class="feature-card">
+          <i class="fas fa-user-tie"></i>
+          <h3>Expert Guides</h3>
+          <p>All our guides are certified Wilderness First Responders with 10+ years of experience on these mountains.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-heartbeat"></i>
+          <h3>Safety First</h3>
+          <p>Daily health checks, pulse oximeters, emergency oxygen, and helicopter evacuation coverage included.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-utensils"></i>
+          <h3>Quality Meals</h3>
+          <p>Fresh, nutritious meals prepared by our mountain chefs. Special dietary requirements accommodated.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-campground"></i>
+          <h3>Quality Gear</h3>
+          <p>Four-season mountain tents, comfortable sleeping mats, and all camping equipment provided.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-users"></i>
+          <h3>Small Groups</h3>
+          <p>Maximum 8 climbers per group ensuring personalized attention and better summit success.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-hand-holding-heart"></i>
+          <h3>Porter Welfare</h3>
+          <p>We follow KPAP guidelines ensuring fair wages, proper gear, and weight limits for our porters.</p>
+        </div>
+      </div>
+
+      <!-- Testimonial -->
+      <div class="testimonial fade-in">
+        <i class="fas fa-quote-right"></i>
+        <blockquote>
+          "Summiting Kilimanjaro with Erniza's team was the hardest and most rewarding thing I've ever done. The guides were incredible — they literally carried my daypack when I struggled and sang to keep our spirits up. 100% recommend!"
+        </blockquote>
+        <p style="margin-top: 20px;">— Mark Thompson, Canada</p>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-section fade-in">
+        <h2>Ready to Reach the Roof of Africa?</h2>
+        <p style="margin-bottom: 25px;">Let's plan your mountain adventure. Our team will help you choose the perfect route and prepare for your climb.</p>
+        <a href="contact.html" class="btn btn-gold btn-lg">
+          <i class="fas fa-mountain"></i> Start Planning Your Climb
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4><i class="fas fa-paw" style="color: var(--savanna-gold);"></i> Erniza Africa Safaris</h4>
+          <p><i class="fas fa-map-marker-alt"></i> Arusha, Tanzania</p>
+          <a href="tel:+255759049127"><p><i class="fas fa-phone"></i> +255 776 749 127</p></a>
+          <p><i class="fas fa-envelope"></i> info@ernizaafricasafaris.com</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="tanzania-safaris.html">Tanzania Safaris</a>
+          <a href="mountains.html">Mountain Treks</a>
+          <a href="kilimanjaro.html">Kilimanjaro Routes</a>
+          <a href="meru.html">Mount Meru</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Popular Routes</h4>
+          <a href="kilimanjaro.html#machame">Machame Route</a>
+          <a href="kilimanjaro.html#marangu">Marangu Route</a>
+          <a href="kilimanjaro.html#lemosho">Lemosho Route</a>
+          <a href="meru.html">Momella Route</a>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/ernizaafrica/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.tripadvisor.com/Attraction_Review-g297913-d34578616-Reviews-Erniza_Africa_Safaris-Arusha_Arusha_Region.html"><svg width="24px" height="24px" style="
+              filter: brightness(0) invert(1);" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M20 6.009h-2.829C15.211 4.675 12.813 4 10 4s-5.212.675-7.171 2.009H0c.428.42.827 1.34.993 2.04A4.954 4.954 0 0 0 0 11.008c0 2.757 2.243 5 5 5a4.97 4.97 0 0 0 3.423-1.375L10 17l1.577-2.366A4.97 4.97 0 0 0 15 16.01c2.757 0 5-2.243 5-5 0-1.112-.377-2.13-.993-2.96.166-.7.565-1.62.993-2.04zm-15 8.4c-1.875 0-3.4-1.525-3.4-3.4s1.525-3.4 3.4-3.4 3.4 1.525 3.4 3.4-1.525 3.4-3.4 3.4zm5-3.4a5.008 5.008 0 0 0-4.009-4.9C7.195 5.704 8.53 5.5 10 5.5s2.805.204 4.009.61A5.008 5.008 0 0 0 10 11.008zm5 3.4c-1.875 0-3.4-1.525-3.4-3.4s1.525-3.4 3.4-3.4 3.4 1.525 3.4 3.4-1.525 3.4-3.4 3.4zM5 8.86c-1.185 0-2.15.964-2.15 2.15s.965 2.15 2.15 2.15 2.15-.964 2.15-2.15-.965-2.15-2.15-2.15zm0 2.791a.65.65 0 1 1 0-1.3.65.65 0 0 1 0 1.3zm10-2.791c-1.185 0-2.15.964-2.15 2.15s.965 2.15 2.15 2.15 2.15-.964 2.15-2.15-.965-2.15-2.15-2.15zm0 2.791a.65.65 0 1 1 0-1.3.65.65 0 0 1 0 1.3z"/></svg></a>
+            <a href="https://wa.me/255776049127" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© 2026 Erniza Africa Safaris. All rights reserved. | Proudly Tanzanian 🇹🇿 | Hakuna Matata!</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+    <!-- Google Translate Scripts -->
+  <script type="text/javascript" src="js/translator.js"></script>
+
+  <!-- Load Google Translate API -->
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!-- Hidden element for Google Translate -->
+  <div id="google_translate_element_hidden" style="display: none;"></div>
+</body>
+</html>

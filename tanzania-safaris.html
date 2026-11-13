@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#fcf9f2">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Explore Tanzania's best safari packages - from Serengeti migration to Selous game reserve. Expert guides, luxury camps, and unforgettable wildlife experiences.">
+  <title>Tanzania Safaris | Erniza Africa Safaris</title>
+
+  <!-- Vercel Analytics -->
+    <script>
+      window.va = window.va || function () {
+        (window.vaq = window.vaq || []).push(arguments);
+      };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="shortcut icon" href="assets/Logo/ERNIZA LOGO GOLDEN BROWN WHITE BACKGROUND.png" type="image/x-icon" style="size: 48x48;">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/pages/tanzania-safaris.css">
+
+</head>
+<body>
+   <!-- Language Switcher -->
+  <div class="language-switcher" id="languageSwitcher">
+    <button class="lang-btn" onclick="toggleLanguageMenu()">
+      <i class="fas fa-globe"></i> <span id="currentLang">English</span> <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="language-menu" id="languageMenu">
+      <a href="#" onclick="changeLanguage('en'); return false;" class="active">🇬🇧 English</a>
+      <a href="#" onclick="changeLanguage('fr'); return false;">🇫🇷 Français</a>
+      <a href="#" onclick="changeLanguage('de'); return false;">🇩🇪 Deutsch</a>
+      <a href="#" onclick="changeLanguage('es'); return false;">🇪🇸 Español</a>
+      <a href="#" onclick="changeLanguage('it'); return false;">🇮🇹 Italiano</a>
+      <a href="#" onclick="changeLanguage('pt'); return false;">🇵🇹 Português</a>
+      <a href="#" onclick="changeLanguage('ru'); return false;">🇷🇺 Русский</a>
+      <a href="#" onclick="changeLanguage('zh-CN'); return false;">🇨🇳 中文 (简体)</a>
+      <a href="#" onclick="changeLanguage('ja'); return false;">🇯🇵 日本語</a>
+      <a href="#" onclick="changeLanguage('ko'); return false;">🇰🇷 한국어</a>
+      <a href="#" onclick="changeLanguage('ar'); return false;">🇸🇦 العربية</a>
+      <a href="#" onclick="changeLanguage('nl'); return false;">🇳🇱 Nederlands</a>
+    </div>
+  </div>
+  <!-- Header Navigation -->
+  <header style="background: var(--earth-green); padding: 10px 0;">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <img src="assets/Logo/ERNIZA LOGOTYPE BLOCK GOLDEN BROWN WHITE BACKGROUND.png" alt="" style="width: 110px;">
+        </a>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html">Home</a>
+          <a href="tanzania-safaris.html" class="active">Tanzania Safaris</a>
+          <a href="mountains.html">Mountains</a>
+          <a href="destinations.html">Destinations</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Safari Hero -->
+    <section class="safari-hero">
+      <div class="container">
+        <h1>Tanzania Safaris</h1>
+        <p>From the endless plains of the Serengeti to the hidden gems of the Southern Circuit — discover Africa's finest wildlife experiences</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <!-- Quick Stats -->
+      <div class="quick-stats fade-in">
+        <div class="quick-stat">
+          <h3><i class="fas fa-paw" style="color: var(--savanna-gold); margin-right: 10px;"></i>16+</h3>
+          <p>National Parks & Reserves</p>
+        </div>
+        <div class="quick-stat">
+          <h3><i class="fas fa-binoculars" style="color: var(--savanna-gold); margin-right: 10px;"></i>430+</h3>
+          <p>Species of Wildlife</p>
+        </div>
+        <div class="quick-stat">
+          <h3><i class="fas fa-star" style="color: var(--savanna-gold); margin-right: 10px;"></i>5</h3>
+          <p>Years Experience</p>
+        </div>
+        <div class="quick-stat">
+          <h3><i class="fas fa-smile" style="color: var(--savanna-gold); margin-right: 10px;"></i>99%</h3>
+          <p>Client Satisfaction</p>
+        </div>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs fade-in">
+        <button class="filter-tab active" data-filter="all">All Safaris</button>
+        <button class="filter-tab" data-filter="northern">Northern Circuit</button>
+        <button class="filter-tab" data-filter="southern">Southern Circuit</button>
+        <button class="filter-tab" data-filter="western">Western Circuit</button>
+        <button class="filter-tab" data-filter="luxury">Luxury</button>
+        <button class="filter-tab" data-filter="budget">Budget-Friendly</button>
+      </div>
+
+      <!-- Safari Cards Grid -->
+      <div class="safari-grid" id="safariGrid">
+        
+        <!-- Safari 1: Serengeti Migration -->
+        <a href="safari-detail.html?id=serengeti-migration" class="safari-card-detailed fade-in" data-category="northern luxury">
+          <div class="safari-card-img" style="background-image: url('assets/serengeti/Serengeti-migration-card.jpg'), linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45))">
+            <span class="safari-card-badge badge-popular">Most Popular</span>
+          </div>
+          <div class="safari-card-body">
+            <h3>Serengeti Great Migration Safari</h3>
+            <div class="safari-card-meta">
+              <span><i class="far fa-clock"></i> 5-7 Days</span>
+              <span><i class="fas fa-moon"></i> 4-6 Nights</span>
+              <span><i class="fas fa-hiking"></i> Game Drives</span>
+            </div>
+            <p>Witness the world's greatest wildlife spectacle as millions of wildebeest and zebra traverse the Serengeti plains. Follow the migration with expert guides who know every river crossing and predator hotspot.</p>
+            <div class="safari-card-footer">
+              <span style="color: var(--earth-green); font-weight: 600;">View Details <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Safari 2: Ngorongoro Crater -->
+        <a href="safari-detail.html?id=ngorongoro-crater" class="safari-card-detailed fade-in" data-category="northern luxury">
+          <div class="safari-card-img" style="background-image: url('assets/ngorongoro/samwel-nsyuka-RxxZvmvygoM-unsplash.jpg');">
+            <span class="safari-card-badge badge-luxury">Luxury</span>
+          </div>
+          <div class="safari-card-body">
+            <h3>Ngorongoro Crater Explorer</h3>
+            <div class="safari-card-meta">
+              <span><i class="far fa-clock"></i> 3-4 Days</span>
+              <span><i class="fas fa-moon"></i> 2-3 Nights</span>
+              <span><i class="fas fa-hiking"></i> Crater Tour</span>
+            </div>
+            <p>Descend into the world's largest intact volcanic caldera, home to over 25,000 animals including the rare black rhino. Enjoy a picnic lunch on the crater floor surrounded by wildlife.</p>
+            <div class="safari-card-footer">
+              <span style="color: var(--earth-green); font-weight: 600;">View Details <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Safari 3: Tarangire & Manyara -->
+        <a href="safari-detail.html?id=tarangire-manyara" class="safari-card-detailed fade-in" data-category="northern budget">
+          <div class="safari-card-img" style="background-image: url('assets/Tarangire and Manyara/tomas-malik-zGYFIzpUUCI-unsplash.jpg');">
+            <span class="safari-card-badge badge-value">Great Value</span>
+          </div>
+          <div class="safari-card-body">
+            <h3>Tarangire & Lake Manyara</h3>
+            <div class="safari-card-meta">
+              <span><i class="far fa-clock"></i> 4-5 Days</span>
+              <span><i class="fas fa-moon"></i> 3-4 Nights</span>
+              <span><i class="fas fa-hiking"></i> Game Drives</span>
+            </div>
+            <p>Explore Tarangire's massive elephant herds and ancient baobab trees, then visit Lake Manyara for tree-climbing lions and flocks of flamingos. Perfect for first-time safari goers.</p>
+            <div class="safari-card-footer">
+              <span style="color: var(--earth-green); font-weight: 600;">View Details <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Safari 4: Selous Game Reserve -->
+        <a href="safari-detail.html?id=selous-reserve" class="safari-card-detailed fade-in" data-category="southern luxury">
+          <div class="safari-card-img" style="background-image: url('assets/selous/marijn-van-der-marel-fZzfaLwOKjU-unsplash.jpg');">
+            <span class="safari-card-badge badge-new">Off the Beaten Path</span>
+          </div>
+          <div class="safari-card-body">
+            <h3>Selous Game Reserve Adventure</h3>
+            <div class="safari-card-meta">
+              <span><i class="far fa-clock"></i> 4-6 Days</span>
+              <span><i class="fas fa-moon"></i> 3-5 Nights</span>
+              <span><i class="fas fa-water"></i> Boat Safari</span>
+            </div>
+            <p>Africa's largest game reserve offers boat safaris on the Rufiji River, walking safaris, and incredible wildlife viewing without the crowds. See hippos, crocodiles, and wild dogs.</p>
+            <div class="safari-card-footer">
+              <span style="color: var(--earth-green); font-weight: 600;">View Details <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Safari 5: Ruaha National Park -->
+        <a href="safari-detail.html?id=ruaha-park" class="safari-card-detailed fade-in" data-category="southern luxury">
+          <div class="safari-card-img" style="background-image: url('assets/ruaha/large_small_herd_8d7587aab2.jpg');">
+            <span class="safari-card-badge badge-luxury">Hidden Gem</span>
+          </div>
+          <div class="safari-card-body">
+            <h3>Ruaha National Park Safari</h3>
+            <div class="safari-card-meta">
+              <span><i class="far fa-clock"></i> 5-7 Days</span>
+              <span><i class="fas fa-moon"></i> 4-6 Nights</span>
+              <span><i class="fas fa-hiking"></i> Game Drives</span>
+            </div>
+            <p>Tanzania's best-kept secret with 10% of the world's lion population. Experience pristine wilderness with few other tourists. Combine with walking safaris for the ultimate adventure.</p>
+            <div class="safari-card-footer">
+              <span style="color: var(--earth-green); font-weight: 600;">View Details <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Safari 6: Katavi & Mahale -->
+        <a href="safari-detail.html?id=katavi-mahale" class="safari-card-detailed fade-in" data-category="western luxury">
+          <div class="safari-card-img" style="background-image: url('assets/katavi/large_Hippos_Katavi_17_8d470047c1.jpg');">
+            <span class="safari-card-badge badge-luxury">Ultimate Adventure</span>
+          </div>
+          <div class="safari-card-body">
+            <h3>Katavi & Mahale Mountains</h3>
+            <div class="safari-card-meta">
+              <span><i class="far fa-clock"></i> 8-10 Days</span>
+              <span><i class="fas fa-moon"></i> 7-9 Nights</span>
+              <span><i class="fas fa-water"></i> Chimpanzee Trek</span>
+            </div>
+            <p>Combine the remote Katavi plains with chimpanzee trekking in Mahale Mountains. See massive buffalo herds, abundant hippos, and trek to see wild chimpanzees on Lake Tanganyika's shores.</p>
+            <div class="safari-card-footer">
+              <span style="color: var(--earth-green); font-weight: 600;">View Details <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Safari 7: Northern Circuit Classic -->
+        <a href="safari-detail.html?id=northern-classic" class="safari-card-detailed fade-in" data-category="northern budget">
+          <div class="safari-card-img" style="background-image: url('assets/misc/WhatsApp Image 2026-07-09 at 07.27.56 (2).jpeg');">
+            <span class="safari-card-badge badge-popular">Classic Route</span>
+          </div>
+          <div class="safari-card-body">
+            <h3>Northern Circuit Classic</h3>
+            <div class="safari-card-meta">
+              <span><i class="far fa-clock"></i> 7-8 Days</span>
+              <span><i class="fas fa-moon"></i> 6-7 Nights</span>
+              <span><i class="fas fa-route"></i> 4 Parks</span>
+            </div>
+            <p>The ultimate northern Tanzania experience covering Serengeti, Ngorongoro, Tarangire, and Lake Manyara. Perfect for those wanting to see it all in one incredible journey.</p>
+            <div class="safari-card-footer">
+              <div class="safari-price">From $6,075 <small>/ person</small></div>
+              <span style="color: var(--earth-green); font-weight: 600;">View Details <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Safari 8: Budget Camping Safari -->
+        <a href="safari-detail.html?id=budget-camping" class="safari-card-detailed fade-in" data-category="budget northern">
+          <div class="safari-card-img" style="background-image: url('assets/omar-fNlQ5Gpq1kM-unsplash.jpg');">
+            <span class="safari-card-badge badge-value">Budget</span>
+          </div>
+          <div class="safari-card-body">
+            <h3>Budget Camping Safari</h3>
+            <div class="safari-card-meta">
+              <span><i class="far fa-clock"></i> 4 Days</span>
+              <span><i class="fas fa-moon"></i> 3 Nights</span>
+              <span><i class="fas fa-campground"></i> Camping</span>
+            </div>
+            <p>Experience the magic of Tanzania's national parks on a budget. Sleep under the stars in comfortable camps, enjoy campfire meals, and still see incredible wildlife.</p>
+            <div class="safari-card-footer">
+              <span style="color: var(--earth-green); font-weight: 600;">View Details <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Safari 09: Mikumi National Park -->
+          <a href="safari-detail.html?id=mikumi-park" class="safari-card-detailed fade-in" data-category="southern budget">
+            <div class="safari-card-img" style="background-image: url('assets/Mikumi/calum-stewart-iH0wDeFTlVo-unsplash.jpg');">
+              <span class="safari-card-badge badge-value">Accessible</span>
+            </div>
+            <div class="safari-card-body">
+              <h3>Mikumi National Park Safari</h3>
+              <div class="safari-card-meta">
+                <span><i class="far fa-clock"></i> 3-4 Days</span>
+                <span><i class="fas fa-moon"></i> 2-3 Nights</span>
+                <span><i class="fas fa-car"></i> From Dar es Salaam</span>
+              </div>
+              <p>Often called the "mini-Serengeti," Mikumi offers incredible wildlife viewing just a few hours from Dar es Salaam. Lions, giraffes, zebras, and elephants roam the Mkata Floodplain against the stunning backdrop of the Uluguru Mountains.</p>
+              <div class="safari-card-footer">
+                <span style="color: var(--earth-green); font-weight: 600;">View Details <i class="fas fa-arrow-right"></i></span>
+              </div>
+            </div>
+          </a>
+
+      </div>
+
+      <!-- CTA Section -->
+      <div class="cta-section fade-in">
+        <h2>Can't Find Your Perfect Safari?</h2>
+        <p style="margin-bottom: 25px;">We specialize in creating custom itineraries tailored to your dreams, budget, and schedule.</p>
+        <a href="contact.html" class="btn btn-gold btn-lg">
+          <i class="fas fa-envelope"></i> Request Custom Safari
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4><i class="fas fa-paw" style="color: var(--savanna-gold);"></i> Erniza Africa Safaris</h4>
+          <p><i class="fas fa-map-marker-alt"></i> Arusha, Tanzania</p>
+          <a href="tel:+255759049127"><p><i class="fas fa-phone"></i> +255 776 749 127</p></a>
+          <a href="mailto: info@ernizaafricasafaris.com"><p><i class="fas fa-envelope"></i> info@ernizaafricasafaris.com</p></a>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="tanzania-safaris.html">Tanzania Safaris</a>
+          <a href="mountains.html">Mountain Treks</a>
+          <a href="destinations.html">Destinations</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Popular Safaris</h4>
+          <a href="safari-detail.html?id=serengeti-migration">Serengeti Migration</a>
+          <a href="safari-detail.html?id=ngorongoro-crater">Ngorongoro Crater</a>
+          <a href="safari-detail.html?id=selous-reserve">Selous Reserve</a>
+          <a href="safari-detail.html?id=northern-classic">Northern Classic</a>
+        </div>
+        <div class="footer-col">
+          <h4>Stay Connected</h4>
+          <div class="social-icons">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.tripadvisor.com/Attraction_Review-g297913-d34578616-Reviews-Erniza_Africa_Safaris-Arusha_Arusha_Region.html"><svg width="24px" height="24px" style="
+              filter: brightness(0) invert(1);" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M20 6.009h-2.829C15.211 4.675 12.813 4 10 4s-5.212.675-7.171 2.009H0c.428.42.827 1.34.993 2.04A4.954 4.954 0 0 0 0 11.008c0 2.757 2.243 5 5 5a4.97 4.97 0 0 0 3.423-1.375L10 17l1.577-2.366A4.97 4.97 0 0 0 15 16.01c2.757 0 5-2.243 5-5 0-1.112-.377-2.13-.993-2.96.166-.7.565-1.62.993-2.04zm-15 8.4c-1.875 0-3.4-1.525-3.4-3.4s1.525-3.4 3.4-3.4 3.4 1.525 3.4 3.4-1.525 3.4-3.4 3.4zm5-3.4a5.008 5.008 0 0 0-4.009-4.9C7.195 5.704 8.53 5.5 10 5.5s2.805.204 4.009.61A5.008 5.008 0 0 0 10 11.008zm5 3.4c-1.875 0-3.4-1.525-3.4-3.4s1.525-3.4 3.4-3.4 3.4 1.525 3.4 3.4-1.525 3.4-3.4 3.4zM5 8.86c-1.185 0-2.15.964-2.15 2.15s.965 2.15 2.15 2.15 2.15-.964 2.15-2.15-.965-2.15-2.15-2.15zm0 2.791a.65.65 0 1 1 0-1.3.65.65 0 0 1 0 1.3zm10-2.791c-1.185 0-2.15.964-2.15 2.15s.965 2.15 2.15 2.15 2.15-.964 2.15-2.15-.965-2.15-2.15-2.15zm0 2.791a.65.65 0 1 1 0-1.3.65.65 0 0 1 0 1.3z"/></svg></a>
+            <a href="https://wa.me/255776049127" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© 2026 Erniza Africa Safaris. All rights reserved. | Proudly Tanzanian 🇹🇿 | Asante sana!</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script>
+    // Safari Filter Functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterTabs = document.querySelectorAll('.filter-tab');
+      const safariCards = document.querySelectorAll('.safari-card-detailed');
+
+      filterTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+          // Remove active class from all tabs
+          filterTabs.forEach(t => t.classList.remove('active'));
+          // Add active class to clicked tab
+          this.classList.add('active');
+          
+          const filter = this.getAttribute('data-filter');
+          
+          safariCards.forEach(card => {
+            const category = card.getAttribute('data-category');
+            
+            if (filter === 'all' || category.includes(filter)) {
+              card.style.display = 'block';
+              setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+              }, 50);
+            } else {
+              card.style.opacity = '0';
+              card.style.transform = 'translateY(20px)';
+              setTimeout(() => {
+                card.style.display = 'none';
+              }, 300);
+            }
+          });
+        });
+      });
+    });
+  </script>
+    <!-- Google Translate Scripts -->
+  <script type="text/javascript" src="js/translator.js"></script>
+
+  <!-- Load Google Translate API -->
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!-- Hidden element for Google Translate -->
+  <div id="google_translate_element_hidden" style="display: none;"></div>
+</body>
+</html>

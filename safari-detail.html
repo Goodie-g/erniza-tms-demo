@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Detailed safari itinerary, pricing, and inclusions for your Tanzanian adventure with Erniza Africa Safaris.">
+  <title>Safari Details | Erniza Africa Safaris</title>
+
+  <!-- Vercel Analytics -->
+    <script>
+      window.va = window.va || function () {
+        (window.vaq = window.vaq || []).push(arguments);
+      };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="shortcut icon" href="assets/Logo/ERNIZA LOGO GOLDEN BROWN WHITE BACKGROUND.png" type="image/x-icon" style="size: 48x48;">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/pages/safari-detail.css">
+
+</head>
+<body>
+   <!-- Language Switcher -->
+  <div class="language-switcher" id="languageSwitcher">
+    <button class="lang-btn" onclick="toggleLanguageMenu()">
+      <i class="fas fa-globe"></i> <span id="currentLang">English</span> <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="language-menu" id="languageMenu">
+      <a href="#" onclick="changeLanguage('en'); return false;" class="active">🇬🇧 English</a>
+      <a href="#" onclick="changeLanguage('fr'); return false;">🇫🇷 Français</a>
+      <a href="#" onclick="changeLanguage('de'); return false;">🇩🇪 Deutsch</a>
+      <a href="#" onclick="changeLanguage('es'); return false;">🇪🇸 Español</a>
+      <a href="#" onclick="changeLanguage('it'); return false;">🇮🇹 Italiano</a>
+      <a href="#" onclick="changeLanguage('pt'); return false;">🇵🇹 Português</a>
+      <a href="#" onclick="changeLanguage('ru'); return false;">🇷🇺 Русский</a>
+      <a href="#" onclick="changeLanguage('zh-CN'); return false;">🇨🇳 中文 (简体)</a>
+      <a href="#" onclick="changeLanguage('ja'); return false;">🇯🇵 日本語</a>
+      <a href="#" onclick="changeLanguage('ko'); return false;">🇰🇷 한국어</a>
+      <a href="#" onclick="changeLanguage('ar'); return false;">🇸🇦 العربية</a>
+      <a href="#" onclick="changeLanguage('nl'); return false;">🇳🇱 Nederlands</a>
+    </div>
+  </div>
+  <header style="background: var(--earth-green); padding: 10px 0;">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <img src="assets/Logo/ERNIZA LOGOTYPE BLOCK GOLDEN BROWN WHITE BACKGROUND.png" alt="" style="width: 110px;">
+        </a>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html">Home</a>
+          <a href="tanzania-safaris.html">Tanzania Safaris</a>
+          <a href="mountains.html">Mountains</a>
+          <a href="destinations.html">Destinations</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Dynamic Hero Section -->
+    <section class="safari-detail-hero" id="safariHero">
+      <div class="container">
+        <div class="safari-detail-hero-content">
+          <h1 id="safariTitle">Loading Safari...</h1>
+          <p id="safariSubtitle"><i class="fas fa-map-marker-alt"></i> <span>Tanzania</span></p>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> <span>/</span>
+        <a href="tanzania-safaris.html">Tanzania Safaris</a> <span>/</span>
+        <span id="breadcrumbTitle">Safari Details</span>
+      </div>
+
+      <div class="detail-layout">
+        <!-- Main Content -->
+        <div class="detail-main">
+          <div class="fade-in">
+            <h2>Overview</h2>
+            <p id="safariOverview" style="color: #555; line-height: 1.8;">Loading safari details...</p>
+          </div>
+
+          <!-- Highlights Bar -->
+          <div class="highlight-bar fade-in" id="highlightsBar">
+            <div class="highlight-item">
+              <i class="far fa-clock"></i>
+              <div><strong>Duration</strong><br><span id="safariDuration">-</span></div>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-moon"></i>
+              <div><strong>Nights</strong><br><span id="safariNights">-</span></div>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-users"></i>
+              <div><strong>Group Size</strong><br><span id="safariGroup">2-6 People</span></div>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-route"></i>
+              <div><strong>Type</strong><br><span id="safariType">Game Drive Safari</span></div>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-tag"></i>
+              <div><strong>Difficulty</strong><br><span id="safariDifficulty">Easy</span></div>
+            </div>
+          </div>
+
+          <!-- Image Gallery -->
+          <div class="image-gallery fade-in" id="imageGallery">
+            <!-- Images loaded dynamically -->
+          </div>
+
+          <!-- Itinerary -->
+          <div class="fade-in">
+            <h3><i class="fas fa-calendar-alt" style="color: var(--savanna-gold); margin-right: 10px;"></i>Detailed Itinerary</h3>
+            <div id="itineraryContainer">
+              <p style="color: #555;">Loading itinerary...</p>
+            </div>
+          </div>
+
+          <!-- Inclusions -->
+          <div class="fade-in" id="inclusionsSection">
+            <h3>What's Included & Excluded</h3>
+            <div class="inclusions" id="inclusionsContainer">
+              <!-- Loaded dynamically -->
+            </div>
+          </div>
+
+          <!-- Additional Info -->
+          <div class="fade-in" id="additionalInfo" style="margin-top: 30px;">
+            <!-- Loaded dynamically -->
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside>
+          <div class="sidebar-card">
+            <div class="price-display" id="safariPrice">$0</div>
+            <p class="price-note display-remove">per person sharing</p>
+            <div id="priceTiers"></div>
+            
+            <a href="contact.html" class="btn btn-gold">
+              <i class="fas fa-paper-plane"></i> Book This Safari
+            </a>
+            <a href="contact.html" class="btn btn-outline">
+              <i class="fas fa-comments"></i> Ask a Question
+            </a>
+            
+            <ul class="sidebar-features">
+              <li><i class="fas fa-check-circle"></i> Instant confirmation</li>
+              <li><i class="fas fa-check-circle"></i> Free cancellation up to 30 days</li>
+              <li><i class="fas fa-check-circle"></i> No booking fees</li>
+              <li><i class="fas fa-check-circle"></i> 24/7 support in Tanzania</li>
+              <li><i class="fas fa-shield-alt"></i> Fully licensed operator</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+
+      </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4><i class="fas fa-paw" style="color: var(--savanna-gold);"></i> Erniza Africa Safaris</h4>
+          <p><i class="fas fa-map-marker-alt"></i> Arusha, Tanzania</p>
+          <a href="tel:+255759049127"><p><i class="fas fa-phone"></i> +255 776 749 127</p></a>
+          <a href="mailto: info@ernizaafricasafaris.com"><p><i class="fas fa-envelope"></i> info@ernizaafricasafaris.com</p></a>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="tanzania-safaris.html">Tanzania Safaris</a>
+          <a href="mountains.html">Mountain Treks</a>
+          <a href="destinations.html">Destinations</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Popular Safaris</h4>
+          <a href="safari-detail.html?id=serengeti-migration">Serengeti Migration</a>
+          <a href="safari-detail.html?id=ngorongoro-crater">Ngorongoro Crater</a>
+          <a href="safari-detail.html?id=selous-reserve">Selous Reserve</a>
+          <a href="safari-detail.html?id=northern-classic">Northern Classic</a>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/ernizaafrica/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.tripadvisor.com/Attraction_Review-g297913-d34578616-Reviews-Erniza_Africa_Safaris-Arusha_Arusha_Region.html"><svg width="24px" height="24px" style="
+              filter: brightness(0) invert(1);" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M20 6.009h-2.829C15.211 4.675 12.813 4 10 4s-5.212.675-7.171 2.009H0c.428.42.827 1.34.993 2.04A4.954 4.954 0 0 0 0 11.008c0 2.757 2.243 5 5 5a4.97 4.97 0 0 0 3.423-1.375L10 17l1.577-2.366A4.97 4.97 0 0 0 15 16.01c2.757 0 5-2.243 5-5 0-1.112-.377-2.13-.993-2.96.166-.7.565-1.62.993-2.04zm-15 8.4c-1.875 0-3.4-1.525-3.4-3.4s1.525-3.4 3.4-3.4 3.4 1.525 3.4 3.4-1.525 3.4-3.4 3.4zm5-3.4a5.008 5.008 0 0 0-4.009-4.9C7.195 5.704 8.53 5.5 10 5.5s2.805.204 4.009.61A5.008 5.008 0 0 0 10 11.008zm5 3.4c-1.875 0-3.4-1.525-3.4-3.4s1.525-3.4 3.4-3.4 3.4 1.525 3.4 3.4-1.525 3.4-3.4 3.4zM5 8.86c-1.185 0-2.15.964-2.15 2.15s.965 2.15 2.15 2.15 2.15-.964 2.15-2.15-.965-2.15-2.15-2.15zm0 2.791a.65.65 0 1 1 0-1.3.65.65 0 0 1 0 1.3zm10-2.791c-1.185 0-2.15.964-2.15 2.15s.965 2.15 2.15 2.15 2.15-.964 2.15-2.15-.965-2.15-2.15-2.15zm0 2.791a.65.65 0 1 1 0-1.3.65.65 0 0 1 0 1.3z"/></svg></a>
+            <a href="https://wa.me/255776049127" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© 2026 Erniza Africa Safaris. All rights reserved. | Asante sana!</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script>
+    const priceNote = document.querySelector('price-note');
+    const safariPrice = document.getElementById('safariPrice');
+    if (safariPrice.value === 0) {
+      priceNote.classList.add('display-remove');
+    }
+    
+
+    // ===== COMPLETE SAFARI DATA =====
+    const safariData = {
+      'serengeti-migration': {
+        title: 'Serengeti Great Migration Safari',
+        subtitle: 'Northern Tanzania - Serengeti National Park',
+        heroImage: 'assets/serengeti/david-clode-azAbifyYlAM-unsplash.jpg',
+        // price: '$2,500',
+        duration: '5-7 Days',
+        nights: '4-6 Nights',
+        groupSize: '2-6 People',
+        type: 'Game Drive Safari',
+        difficulty: 'Easy',
+        overview: 'Experience the world\'s greatest wildlife spectacle as millions of wildebeest and zebra thunder across the Serengeti plains. This carefully crafted safari takes you to the heart of the action with expert Maasai guides who know every river crossing and predator hotspot. Witness river crossings, big cats in action, and the raw beauty of Africa\'s most famous national park. The Great Migration is a year-round event, with different highlights each season — from calving season in the south to dramatic river crossings in the north.',
+        images: [
+          '../assets/serengeti/haydn-PwN9a_CqVIU-unsplash.jpg',
+          '../assets/serengeti/steward-masweneng-FDRteaywBYY-unsplash.jpg',
+          '../assets/serengeti/mufaddal-badri-DDC-eFrSWkA-unsplash.jpg',
+          '../assets/serengeti/jenny-zhang-Rjf-cb144yY-unsplash.jpg'
+        ],
+        itinerary: [
+          { day: 'Day 1', title: 'Arrival in Arusha', desc: 'Upon arrival at Kilimanjaro International Airport, you\'ll be warmly welcomed by our representative and transferred to your hotel in Arusha. Enjoy an evening briefing about your upcoming safari adventure. Overnight at Mount Meru Hotel (Bed & Breakfast).' },
+          { day: 'Day 2', title: 'Arusha to Serengeti National Park', desc: 'After breakfast, fly to Serengeti National Park. Enjoy a game drive en route to your camp, witnessing the vast plains and abundant wildlife. Afternoon game drive exploring the Seronera area, known for its high concentration of big cats. Overnight at Serengeti Heritage Camp (Full Board).' },
+          { day: 'Day 3-4', title: 'Full Days in Serengeti', desc: 'Two full days of game drives following the migration patterns. Witness river crossings (seasonal), big cats hunting, and the incredible diversity of wildlife. Enjoy picnic lunches in the bush surrounded by nature. Optional hot air balloon safari at dawn for a bird\'s-eye view of the plains.' },
+          { day: 'Day 5', title: 'Serengeti to Ngorongoro', desc: 'Morning game drive in Serengeti, then drive to Ngorongoro Conservation Area. Visit a Maasai village en route to learn about the local culture and traditions. Overnight at Ngorongoro Serena Lodge on the crater rim (Full Board).' },
+          { day: 'Day 6', title: 'Ngorongoro Crater Tour & Departure', desc: 'Early morning descent into the crater for a full day of game viewing. See the Big Five in one of Africa\'s most unique ecosystems. Enjoy a picnic lunch by the hippo pool before ascending and returning to Arusha for your departure flight.' }
+        ],
+        included: [
+          'Airport transfers', 'Accommodation as per itinerary', 'All meals on safari', '4x4 safari vehicle with pop-up roof', 'Professional English-speaking guide', 'Park entrance fees', 'Drinking water in vehicle', 'Flying doctors insurance', 'Maasai village visit', 'Government taxes'
+        ],
+        excluded: [
+          'International flights', 'Visa fees', 'Travel insurance', 'Alcoholic beverages', 'Tips and gratuities', 'Optional activities (balloon safari)', 'Personal expenses', 'Laundry services'
+        ],
+        additionalInfo: '<h3 style="color: var(--earth-green);">Best Time for Migration Viewing</h3><p style="color: #555; line-height: 1.8;">The Great Migration is a year-round circular event. December-March: Calving season in southern Serengeti. April-May: Migration moves northwest. June-July: Rutting season and Grumeti River crossings. August-October: Mara River crossings in northern Serengeti. November: Migration returns south.</p>'
+      },
+
+      'ngorongoro-crater': {
+        title: 'Ngorongoro Crater Explorer',
+        subtitle: 'Northern Tanzania - Ngorongoro Conservation Area',
+        heroImage: 'assets/ngorongoro/hero.jpg',
+        // price: '$1,800',
+        duration: '3-4 Days',
+        nights: '2-3 Nights',
+        groupSize: '2-6 People',
+        type: 'Crater Safari',
+        difficulty: 'Easy',
+        overview: 'Descend into the world\'s largest intact volcanic caldera, often called "Africa\'s Eden." This UNESCO World Heritage Site is home to over 25,000 animals including the rare black rhinoceros. The crater floor offers some of the easiest and most rewarding Big Five viewing in Africa, all within a stunning natural amphitheater surrounded by 600-meter walls.',
+        images: [
+          '../assets/ngorongoro/audric-wonkam-n15VUtOBAsM-unsplash.jpg',
+          '../assets/ngorongoro/mariola-grobelska-_3q6XCqVgfU-unsplash.jpg',
+          '../assets/ngorongoro/road.jpg',
+          '../assets/ngorongoro/patricia-trisha-berberat-ltYLxH85MiU-unsplash.jpg'
+        ],
+        itinerary: [
+          { day: 'Day 1', title: 'Arusha to Ngorongoro', desc: 'Drive from Arusha to Ngorongoro Conservation Area, passing through beautiful highland scenery. Afternoon visit to a Maasai village to learn about their traditional way of life. Overnight at Ngorongoro Serena Lodge on the crater rim with spectacular views.' },
+          { day: 'Day 2', title: 'Full Day Crater Tour', desc: 'Early morning descent into the crater for a full day of game viewing. Explore the diverse habitats — from the soda lake with flamingos to the open grasslands with grazing zebras and wildebeest. See black rhinos, lions, elephants, and if you\'re lucky, a leopard. Picnic lunch by the hippo pool.' },
+          { day: 'Day 3', title: 'Optional Activities & Departure', desc: 'Optional morning walking safari on the crater rim or visit to Olduvai Gorge (the "Cradle of Mankind"). Return to Arusha for your departure flight or onward journey.' }
+        ],
+        included: [
+          'Airport transfers', 'Accommodation as per itinerary', 'All meals on safari', '4x4 safari vehicle', 'Professional guide', 'Crater descent fee', 'Park entrance fees', 'Drinking water', 'Maasai village visit'
+        ],
+        excluded: [
+          'International flights', 'Visa fees', 'Travel insurance', 'Alcoholic beverages', 'Tips', 'Olduvai Gorge visit (optional)'
+        ],
+        additionalInfo: '<h3 style="color: var(--earth-green);">Crater Facts</h3><p style="color: #555; line-height: 1.8;">The Ngorongoro Crater is 610 meters deep and covers 260 square kilometers. It was formed when a massive volcano exploded and collapsed on itself 2-3 million years ago. The crater is one of the best places in Africa to see the endangered black rhinoceros in the wild.</p>'
+      },
+
+      'tarangire-manyara': {
+        title: 'Tarangire & Lake Manyara Safari',
+        subtitle: 'Northern Tanzania - Tarangire & Manyara',
+        heroImage: 'assets/Tarangire and Manyara/tanzania-wild-sky-NHQOJBbJgdk-unsplash.jpg',
+        // price: '$2,100',
+        duration: '4-5 Days',
+        nights: '3-4 Nights',
+        groupSize: '2-6 People',
+        type: 'Game Drive Safari',
+        difficulty: 'Easy',
+        overview: 'Explore two of Tanzania\'s most underrated parks. Tarangire is famous for its massive elephant herds and ancient baobab trees, while Lake Manyara offers tree-climbing lions, thousands of flamingos, and diverse ecosystems. This combination is perfect for first-time safari goers and those wanting excellent wildlife viewing without the crowds.',
+        images: [
+          '../assets/Tarangire and Manyara/uzuri-safaris-tanzania-dpoOaYVzMuI-unsplash.jpg',
+          '../assets/Tarangire and Manyara/elliot-paris-Vk7zkPYfXHc-unsplash.jpg',
+          '../assets/Tarangire and Manyara/tanzania-wild-sky-rcGU1VUgLos-unsplash.jpg',
+          '../assets/Tarangire and Manyara/elliot-paris-6pc7BHIXZ2w-unsplash.jpg'
+        ],
+        itinerary: [
+          { day: 'Day 1', title: 'Arusha to Tarangire', desc: 'Drive from Arusha to Tarangire National Park. Afternoon game drive among majestic baobab trees and the Tarangire River, watching elephants drink and play. Overnight at Tarangire Safari Lodge.' },
+          { day: 'Day 2', title: 'Full Day in Tarangire', desc: 'Full day exploring Tarangire\'s diverse landscapes. See large elephant families, lions lounging in acacia trees, and the park\'s famous tree-climbing pythons. Picnic lunch overlooking the river.' },
+          { day: 'Day 3', title: 'Lake Manyara National Park', desc: 'Drive to Lake Manyara National Park. Game drive through the groundwater forest to see baboons, blue monkeys, and if you\'re lucky, the famous tree-climbing lions. Visit the soda lake to see flamingos and pelicans.' },
+          { day: 'Day 4', title: 'Manyara to Arusha', desc: 'Morning walking safari or cultural visit to a local village. Return to Arusha for your departure flight.' }
+        ],
+        included: [
+          'Airport transfers', 'Accommodation', 'All meals on safari', '4x4 vehicle', 'Professional guide', 'Park fees', 'Drinking water', 'Village visit'
+        ],
+        excluded: [
+          'International flights', 'Visa fees', 'Travel insurance', 'Alcohol', 'Tips'
+        ],
+        additionalInfo: '<h3 style="color: var(--earth-green);">Wildlife Highlights</h3><p style="color: #555; line-height: 1.8;">Tarangire hosts Tanzania\'s largest elephant population with herds of up to 300 individuals. Lake Manyara is famous for its tree-climbing lions — one of the few places in Africa where lions regularly climb trees. The park is also a birdwatcher\'s paradise with over 400 species recorded.</p>'
+      },
+
+      'selous-reserve': {
+        title: 'Selous Game Reserve Adventure',
+        subtitle: 'Southern Tanzania - Nyerere National Park',
+        heroImage: 'assets/selous/aron-marinelli-R0YJGcKShiM-unsplash.jpg',
+        // price: '$2,300',
+        duration: '4-6 Days',
+        nights: '3-5 Nights',
+        groupSize: '2-8 People',
+        type: 'Boat & Game Drive Safari',
+        difficulty: 'Easy',
+        overview: 'Explore Africa\'s largest protected wildlife area — bigger than Switzerland. The Rufiji River creates a network of channels perfect for boat safaris, offering a unique perspective on wildlife. See hippos, crocodiles, elephants swimming, and if you\'re fortunate, the endangered African wild dog. With few visitors, Selous offers an exclusive, authentic safari experience.',
+        images: [
+          '../assets/selous/aron-marinelli-UHDMgTb47q8-unsplash.jpg',
+          '../assets/selous/bart-van-der-lugt-VlXBhqEV3Xw-unsplash.jpg',
+          '../assets/selous/nichika-sakurai-FFXq97lt6lQ-unsplash.jpg',
+          '../assets/selous/aron-marinelli-E1UwiW268FU-unsplash.jpg'
+        ],
+        itinerary: [
+          { day: 'Day 1', title: 'Fly to Selous', desc: 'Fly from Dar es Salaam or Arusha to Selous. Afternoon boat safari on the Rufiji River — watch hippos, crocodiles, and elephants at the water\'s edge. Overnight at Selous Riverside Camp.' },
+          { day: 'Day 2-3', title: 'Game Drives & Walking Safari', desc: 'Full days exploring Selous with morning and afternoon game drives. One day includes a guided walking safari with an armed ranger — track wildlife on foot and learn about the smaller creatures and medicinal plants.' },
+          { day: 'Day 4', title: 'Departure', desc: 'Morning boat safari or game drive. Fly back to Dar es Salaam or Arusha for your onward journey.' }
+        ],
+        included: [
+          'Domestic flights (from Dar/Arusha)', 'Accommodation', 'All meals', 'Boat safaris', 'Walking safari', 'Game drives', 'Armed ranger', 'Park fees'
+        ],
+        excluded: [
+          'International flights', 'Visa fees', 'Travel insurance', 'Alcohol', 'Tips'
+        ],
+        additionalInfo: '<h3 style="color: var(--earth-green);">Unique Activities</h3><p style="color: #555; line-height: 1.8;">Selous is one of the few places in Tanzania where you can combine boat safaris, game drives, and walking safaris in one itinerary. The Rufiji River is home to massive crocodiles (some over 5 meters long) and huge pods of hippos.</p>'
+      },
+
+      'ruaha-park': {
+        title: 'Ruaha National Park Safari',
+        subtitle: 'Southern Tanzania - Ruaha National Park',
+        heroImage: 'https://images.unsplash.com/photo-1523805009345-7448845a9e53?q=80&w=1472&auto=format&fit=crop',
+        // price: '$2,600',
+        duration: '5-7 Days',
+        nights: '4-6 Nights',
+        groupSize: '2-6 People',
+        type: 'Game Drive Safari',
+        difficulty: 'Easy',
+        overview: 'Tanzania\'s best-kept secret and largest national park. Ruaha is home to 10% of the world\'s lion population and offers incredible predator viewing with very few other tourists. The Great Ruaha River acts as a lifeline during the dry season, drawing massive herds of elephants and buffalo. This is safari at its most wild and authentic.',
+        images: [
+          '../assets/ruaha/colin-watts-DVKlFxioOnc-unsplash.jpg',
+          '../assets/ruaha/samwel-nsyuka-0rgMqd90Anc-unsplash.jpg',
+          '../assets/ruaha/large_Grt_Ruaha_River_37812b8251.jpg',
+          '../assets/ruaha/large_Ruaha_red_hornbill_6441d57379.jpg'
+        ],
+        itinerary: [
+          { day: 'Day 1', title: 'Fly to Ruaha', desc: 'Fly from Dar es Salaam or Arusha to Ruaha. Afternoon game drive along the Great Ruaha River. Overnight at Ruaha River Lodge.' },
+          { day: 'Day 2-4', title: 'Exploring Ruaha', desc: 'Full days of game drives exploring different areas of the park. See large lion prides, leopards, cheetahs, elephants, and rare antelopes like greater kudu and roan antelope. Walking safaris available.' },
+          { day: 'Day 5', title: 'Departure', desc: 'Morning game drive. Fly back for your onward journey.' }
+        ],
+        included: [
+          'Domestic flights', 'Accommodation', 'All meals', 'Game drives', 'Professional guide', 'Park fees', 'Drinking water'
+        ],
+        excluded: [
+          'International flights', 'Visa fees', 'Travel insurance', 'Alcohol', 'Tips'
+        ],
+        additionalInfo: '<h3 style="color: var(--earth-green);">Predator Paradise</h3><p style="color: #555; line-height: 1.8;">Ruaha has one of the highest concentrations of predators in Africa. Lion prides here can number over 30 individuals. The park is also one of the best places to see the endangered African wild dog and the rare striped hyena.</p>'
+      },
+
+      'katavi-mahale': {
+        title: 'Katavi & Mahale Mountains',
+        subtitle: 'Western Tanzania - Katavi & Mahale',
+        heroImage: 'assets/katavi/uzuri-safaris-tanzania-65N_pXX8-hE-unsplash.jpg',
+        // price: '$4,500',
+        duration: '8-10 Days',
+        nights: '7-9 Nights',
+        groupSize: '2-6 People',
+        type: 'Safari & Chimpanzee Trek',
+        difficulty: 'Moderate',
+        overview: 'Combine the remote wildlife paradise of Katavi with the magical chimpanzee trekking of Mahale Mountains. Witness massive buffalo herds and hippo congregations in Katavi, then fly to the shores of Lake Tanganyika to trek through lush rainforest in search of wild chimpanzees. This is Tanzania\'s ultimate off-the-beaten-path adventure.',
+        images: [
+          '../assets/katavi/large_Lion_4751cdb2af.jpg',
+          '../assets/katavi/large_crocodile_pile_1_0875cdb1cf.jpg',
+          '../assets/katavi/large_Hippos_4_d52d56ceac.jpg',
+          '../assets/katavi/large_Elephant_digging_4d8198fa26.jpg'
+        ],
+        itinerary: [
+          { day: 'Day 1-3', title: 'Katavi National Park', desc: 'Fly to Katavi. Three days of game drives in one of Tanzania\'s most remote parks. Witness massive buffalo herds, lion prides, and during the dry season, hundreds of hippos crammed into shrinking pools.' },
+          { day: 'Day 4-7', title: 'Mahale Mountains', desc: 'Fly to Mahale on the shores of Lake Tanganyika. Trek through lush rainforest to find and observe habituated chimpanzee troops. Afternoon relaxation on pristine white sand beaches. Swimming, kayaking, and snorkeling in the crystal-clear lake.' },
+          { day: 'Day 8', title: 'Departure', desc: 'Morning at leisure. Fly back to Arusha for your departure flight.' }
+        ],
+        included: [
+          'Domestic flights', 'Accommodation', 'All meals', 'Game drives', 'Chimpanzee trekking permits', 'Professional guide', 'Park fees', 'Lake activities'
+        ],
+        excluded: [
+          'International flights', 'Visa fees', 'Travel insurance', 'Alcohol', 'Tips'
+        ],
+        additionalInfo: '<h3 style="color: var(--earth-green);">Chimpanzee Trekking Tips</h3><p style="color: #555; line-height: 1.8;">Trekking can be strenuous — be prepared for 2-4 hours of hiking in humid rainforest. Wear long pants and sturdy boots. You\'ll spend one magical hour with the chimps when found. No flash photography. Minimum age is 12 years old.</p>'
+      },
+
+      'northern-classic': {
+        title: 'Northern Circuit Classic',
+        subtitle: 'Northern Tanzania - All Major Parks',
+        heroImage: 'assets/misc/WhatsApp Image 2026-07-09 at 07.27.55.jpeg',
+        // price: 'From $6,075',
+        priceTiers: [
+          { group: '2 Pax', tented: '$6,892', lodge: '$8,272' },
+          { group: '3 - 4 Pax', tented: '$6,367', lodge: '$7,747' },
+          { group: '5 - 7 Pax', tented: '$6,075', lodge: '$7,455', best: true }
+        ],
+        duration: '7-8 Days',
+        nights: '6-7 Nights',
+        groupSize: '2-7 People',
+        type: 'Comprehensive Safari',
+        difficulty: 'Easy',
+        overview: 'The ultimate northern Tanzania experience covering all four major parks. From the elephant-rich Tarangire to the tree-climbing lions of Manyara, the vast Serengeti plains, and the magnificent Ngorongoro Crater — this itinerary showcases the very best of Tanzania\'s wildlife and landscapes in one incredible journey.',
+        images: [
+          '../assets/misc/WhatsApp Image 2026-07-09 at 07.28.11 (4).jpeg',
+          '../assets/serengeti/bibhash-polygon-cafe-banerjee-5sG3uc1IPRw-unsplash.jpg',
+          '../assets/serengeti/ray-rui-Tvo1NEmfYB0-unsplash.jpg',
+          '../assets/sammy-wong-lFMIQ6AiiW8-unsplash.jpg'
+        ],
+        itinerary: [
+          { day: 'Day 1', title: 'Tarangire National Park', desc: 'Drive from Arusha to Tarangire National Park for game viewing,dinner and overnight at KARATU-FB' },
+          { day: 'Day 2', title: 'Travel to Serengeti National Park', desc: 'After breakfast, drive to Serengeti National Park via Ngorongoro conservation area authority game viewing en route,dinner and overnight at SERENGETI CENTRAL-FB' },
+          { day: 'Day 3 - 5', title: 'Serengeti National Park', desc: 'Full day game viewing at the center of Serengeti National Park, dinner and overnight at SERENGETI CENTRAL-FB' },
+          { day: 'Day 6', title: 'Ngorongoro Crater', desc: 'Two full days in the Serengeti. Game drives following wildlife movements. See the Big Five and experience the vast plains.' },
+          { day: 'Day 7', title: 'Lake Manyara & Return to Arusha', desc: 'After breakfast, drive to Lake Manyara National Park for the game viewing, later drive to Arusha and drop to the Airport for the flight back home.'}
+        ],
+        included: [
+          'All transfers', 'Accommodation on Fullboard', 'All meals on safari', '4x4 vehicle', 'Professional guide', '⁠All entry/Concession fees where applicable', 'Water'
+        ],
+        excluded: [
+          'Flight tickets', 'Visa and immigration fees', 'Insurance', 'Maasai Boma visits - optional', '⁠Gratuity/Tips', '⁠Hot balloons safari', 'Extras at the Lodge Camp'
+        ],
+        additionalInfo: '<h3 style="color: var(--earth-green);">Complete Northern Experience</h3><p style="color: #555; line-height: 1.8;">This itinerary covers all four major northern parks, giving you the most comprehensive safari experience. You\'ll see diverse landscapes — from baobab-studded savanna to dense groundwater forest, from endless plains to the world\'s largest caldera.</p>'
+      },
+
+      'budget-camping': {
+        title: 'Budget Camping Safari',
+        subtitle: 'Northern Tanzania - Best Value',
+        heroImage: 'assets/camping/peter-thomas-72l6VkOroxo-unsplash.jpg',
+        // price: '$950',
+        duration: '4 Days',
+        nights: '3 Nights',
+        groupSize: '4-8 People',
+        type: 'Budget Camping Safari',
+        difficulty: 'Easy',
+        overview: 'Experience the magic of Tanzania\'s national parks without breaking the bank. Sleep under the stars in comfortable dome tents, enjoy campfire meals prepared by our safari chef, and still enjoy incredible wildlife viewing. This is the perfect option for adventurous travelers, students, and anyone wanting an authentic, no-frills safari experience.',
+        images: [
+          '../assets/camping/large_Elephants_greeting_a8502d08b5.jpg',
+          '../assets/camping/peter-thomas-hCnbH_Z_Oew-unsplash.jpg',
+          '../assets/camping/peter-thomas-eCkji10ZCgQ-unsplash.jpg',
+          '../assets/camping/omar-rkxrjXmV5bI-unsplash.jpg'
+        ],
+        itinerary: [
+          { day: 'Day 1', title: 'Arusha to Tarangire', desc: 'Drive to Tarangire. Game drive among elephants and baobabs. Set up camp near the park. Campfire dinner under the stars.' },
+          { day: 'Day 2', title: 'Lake Manyara', desc: 'Full day game drive in Lake Manyara. See flamingos, hippos, and if lucky, tree-climbing lions. Camp overnight.' },
+          { day: 'Day 3', title: 'Ngorongoro Crater', desc: 'Early descent into the crater. Full day game drive with picnic lunch. See the Big Five! Camp on the crater rim.' },
+          { day: 'Day 4', title: 'Return to Arusha', desc: 'Morning at leisure. Drive back to Arusha.' }
+        ],
+        included: [
+          'Transport in 4x4', 'Camping equipment', 'All meals', 'Park fees', 'Crater fee', 'Guide', 'Camping fees'
+        ],
+        excluded: [
+          'Sleeping bag (can rent)', 'Visa', 'Insurance', 'Alcohol', 'Tips'
+        ],
+        additionalInfo: '<h3 style="color: var(--earth-green);">Camping Experience</h3><p style="color: #555; line-height: 1.8;">We provide quality dome tents, foam mattresses, and all camping equipment. Our safari chef prepares hot meals — expect pasta, grilled meats, fresh fruits, and even fresh bread baked in the bush. Campsites have basic facilities with showers and toilets.</p>'
+      },
+      'mikumi-park': {
+  title: 'Mikumi National Park Safari',
+  subtitle: 'Southern Tanzania - Mikumi National Park',
+  heroImage: 'assets/Mikumi/k15-photos-EfgmzSr3tAA-unsplash.jpg',
+  // price: '$1,500',
+  duration: '3-4 Days',
+  nights: '2-3 Nights',
+  groupSize: '2-6 People',
+  type: 'Game Drive Safari',
+  difficulty: 'Easy',
+  overview: 'Often called the "mini-Serengeti," Mikumi National Park offers incredible wildlife viewing just a few hours from Dar es Salaam. The Mkata Floodplain provides classic savanna scenery where lions, giraffes, zebras, elephants, and buffaloes roam against the stunning backdrop of the Uluguru Mountains. Perfect for those short on time or looking for an accessible safari from Tanzania\'s largest city.',
+  images: [
+    '../assets/Mikumi/k15-photos-RdJtoKVIK3g-unsplash.jpg',
+    '../assets/Mikumi/muhuji-mshana-NEIBFVx_iK8-unsplash.jpg',
+    '../assets/Mikumi/muhuji-mshana-xi-ZrRhUC4s-unsplash.jpg',
+    '../assets/Mikumi/calum-stewart-iH0wDeFTlVo-unsplash.jpg'
+  ],
+  itinerary: [
+    { day: 'Day 1', title: 'Dar es Salaam to Mikumi', desc: 'Depart Dar es Salaam early morning for the scenic 4-5 hour drive to Mikumi National Park. Afternoon game drive on the Mkata Floodplain, where you can spot elephants, giraffes, zebras, and lions. Overnight at Mikumi Wildlife Camp (Full Board).' },
+    { day: 'Day 2', title: 'Full Day in Mikumi', desc: 'Full day of game drives exploring different areas of the park. Morning drive to see predators active in the cool hours. Visit the hippo pools where dozens of hippos wallow and grunt. Afternoon drive to the southern sector for different landscapes and wildlife. Optional walking safari available.' },
+    { day: 'Day 3', title: 'Mikumi to Dar es Salaam', desc: 'Early morning game drive to catch the sunrise and last wildlife sightings. After breakfast, depart for Dar es Salaam, arriving in the afternoon. Option to extend your trip with a visit to Udzungwa Mountains or continue to Ruaha.' }
+  ],
+  included: [
+    'Return transport from Dar es Salaam', 'Accommodation as per itinerary', 'All meals on safari', 'Game drives in 4x4 vehicle', 'Professional English-speaking guide', 'Park entrance fees', 'Drinking water', 'Government taxes'
+  ],
+  excluded: [
+    'International flights', 'Visa fees', 'Travel insurance', 'Alcoholic beverages', 'Tips and gratuities', 'Optional activities', 'Personal expenses'
+  ],
+  additionalInfo: '<h3 style="color: var(--earth-green);">Why Visit Mikumi?</h3><p style="color: #555; line-height: 1.8;">Mikumi is the most accessible park from Dar es Salaam, making it perfect for weekend getaways or as an add-on to a beach holiday in Zanzibar. The park is home to healthy populations of lions, leopards, elephants, and the rare eland antelope. Over 400 bird species have been recorded here, making it a birdwatcher\'s paradise. The Mkata Floodplain offers open views similar to the Serengeti, with the added bonus of the spectacular Uluguru Mountains as a backdrop.</p>'
+},
+
+  'zanzibar-stone-town': {
+  title: 'Stone Town Cultural Experience',
+  subtitle: 'Zanzibar - UNESCO World Heritage Site',
+  heroImage: 'assets/Zanzibar/aron-marinelli-19GKdp1fcT8-unsplash.jpg',
+  // price: '$850',
+  duration: '3-4 Days',
+  nights: '2-3 Nights',
+  groupSize: '2-8 People',
+  type: 'Cultural & Historical Tour',
+  difficulty: 'Easy',
+  overview: 'Immerse yourself in the rich history and vibrant culture of Stone Town, a UNESCO World Heritage Site. Wander through narrow winding alleys lined with ornately carved wooden doors, explore bustling spice markets, visit the former slave market, and discover the fascinating blend of African, Arab, Indian, and European influences that make Zanzibar unique. This cultural experience includes guided walking tours, spice farm visits, and sunset dhow cruises.',
+  images: [
+    '../assets/Zanzibar/nichika-sakurai-eci0Mwtbzcw-unsplash.jpg',
+    '../assets/Zanzibar/morgan-nott-6KO_2XG41r4-unsplash.jpg',
+    '../assets/Zanzibar/polly-sadler-v5bOEzl1ggg-unsplash.jpg',
+    '../assets/Zanzibar/audric-wonkam-gWCqCCJIQvg-unsplash.jpg'
+  ],
+  itinerary: [
+    { day: 'Day 1', title: 'Arrival & Stone Town Orientation', desc: 'Arrive at Zanzibar International Airport. Transfer to your boutique hotel in the heart of Stone Town. Afternoon guided walking tour through the historic streets — see the House of Wonders, the Old Fort, and the bustling Darajani Market. Evening welcome dinner at a rooftop restaurant overlooking the Indian Ocean.' },
+    { day: 'Day 2', title: 'Spice Tour & Prison Island', desc: 'Morning visit to a traditional spice farm — see, smell, and taste vanilla, cinnamon, nutmeg, cloves, and pepper fresh from the source. Learn why Zanzibar is called the "Spice Island." Afternoon boat trip to Prison Island (Changuu Island) to see the giant Aldabra tortoises and snorkel in crystal-clear waters.' },
+    { day: 'Day 3', title: 'History & Culture Deep Dive', desc: 'Morning visit to the former slave market and Anglican Cathedral — a powerful and moving historical site. Explore the Freddie Mercury Museum and the Zanzibar National Museum. Afternoon at leisure for shopping in the curio shops or relaxing. Evening sunset dhow cruise with traditional music.' },
+    { day: 'Day 4', title: 'Departure', desc: 'Morning at leisure for last-minute exploration or shopping. Transfer to the airport for your departure flight, or continue to the beaches for your beach extension.' }
+  ],
+  included: [
+    'Airport transfers', 'Boutique hotel accommodation', 'Daily breakfast', 'Guided Stone Town walking tour', 'Spice farm tour', 'Prison Island boat trip', 'Dhow sunset cruise', 'All entry fees'
+  ],
+  excluded: [
+    'International flights', 'Visa fees', 'Travel insurance', 'Lunch and dinner (except welcome dinner)', 'Tips', 'Personal shopping'
+  ],
+  additionalInfo: '<h3 style="color: var(--earth-green);">Stone Town Highlights</h3><p style="color: #555; line-height: 1.8;">Stone Town is best explored on foot — wear comfortable walking shoes and modest clothing respecting local culture. The best photo opportunities are in the early morning and late afternoon when the light is golden on the coral stone buildings. Don\'t miss the Forodhani Night Market for authentic Zanzibari street food including Zanzibar pizza, urojo soup, and fresh seafood skewers.</p>'
+},
+
+'zanzibar-beach': {
+  title: 'Zanzibar Beach Paradise',
+  subtitle: 'Nungwi & Kendwa - Northern Zanzibar',
+  heroImage: 'assets/Zanzibar/med-j-ePeTsqcyUiI-unsplash.jpg',
+  // price: '$1,200',
+  duration: '5-7 Days',
+  nights: '4-6 Nights',
+  groupSize: '2-8 People',
+  type: 'Beach & Relaxation Holiday',
+  difficulty: 'Easy',
+  overview: 'Escape to the pristine white sand beaches of northern Zanzibar. Nungwi and Kendwa offer some of the most beautiful beaches in Africa — powdery white sand, crystal-clear turquoise waters, and spectacular sunsets. Whether you want to relax by the infinity pool, snorkel among vibrant coral reefs, swim with dolphins, or enjoy water sports, this is tropical paradise at its finest.',
+  images: [
+    '../assets/Zanzibar/olga-budko-hl0W9gS0C6k-unsplash.jpg',
+    '../assets/Zanzibar/polly-sadler-glxZAuaYH_M-unsplash.jpg',
+    '../assets/Zanzibar/polly-sadler-IfUeOKvuMas-unsplash.jpg',
+    '../assets/Zanzibar/humphrey-m-e5hzQubIb68-unsplash.jpg'
+  ],
+  itinerary: [
+    { day: 'Day 1', title: 'Arrival & Beach Welcome', desc: 'Arrive at Zanzibar Airport. Private transfer to your beach resort in Nungwi or Kendwa (approximately 1.5 hours). Welcome cocktail on arrival. Settle into your room and enjoy your first stunning Indian Ocean sunset from the beach.' },
+    { day: 'Day 2', title: 'Mnemba Atoll Snorkeling', desc: 'Full-day snorkeling excursion to Mnemba Atoll, Zanzibar\'s premier marine reserve. Swim among colorful coral gardens, spot tropical fish, and look for dolphins. Enjoy a seafood barbecue lunch on a pristine sandbank. Afternoon return for relaxation.' },
+    { day: 'Day 3-4', title: 'Beach Days & Water Activities', desc: 'Days at leisure to enjoy your resort\'s facilities. Options include: scuba diving, deep-sea fishing, kayaking, stand-up paddleboarding, sunset dhow cruises, or simply lounging by the pool with a cocktail. Spa treatments available at the resort.' },
+    { day: 'Day 5', title: 'Cultural Day or Relaxation', desc: 'Optional excursion to a local village to experience authentic Zanzibari life, or visit the Mnarani Turtle Sanctuary. Alternatively, simply enjoy another perfect beach day. Evening beach barbecue under the stars.' },
+    { day: 'Day 6', title: 'Departure', desc: 'Final morning on the beach. Transfer to the airport for your departure, or combine with a Stone Town stay or safari on the mainland.' }
+  ],
+  included: [
+    'Airport transfers', 'Beach resort accommodation', 'Daily breakfast and dinner', 'Mnemba Atoll snorkeling trip', 'Use of resort water sports equipment', 'Beach barbecue dinner', 'Resort facilities'
+  ],
+  excluded: [
+    'International flights', 'Visa fees', 'Travel insurance', 'Lunch (except barbecue)', 'Alcoholic beverages', 'Spa treatments', 'Optional excursions', 'Tips'
+  ],
+  additionalInfo: '<h3 style="color: var(--earth-green);">Beach Paradise Tips</h3><p style="color: #555; line-height: 1.8;">The best beaches are in Nungwi and Kendwa on the northern tip. Unlike many other Zanzibar beaches, these have minimal tidal variation so you can swim all day. The sunsets here are legendary — find a beach bar and enjoy a sundowner. For the best snorkeling, book a trip to Mnemba Atoll where you have a high chance of seeing dolphins. The water temperature averages 27°C year-round.</p>'
+},
+
+'zanzibar-diving': {
+  title: 'Zanzibar Diving Adventure',
+  subtitle: 'Mnemba Atoll & Surrounding Reefs',
+  heroImage: 'assets/Zanzibar/nazarizal-mohammad-k5Z2AhnRwT8-unsplash.jpg',
+  // price: '$1,600',
+  duration: '5-6 Days',
+  nights: '4-5 Nights',
+  groupSize: '2-6 People',
+  type: 'Scuba Diving Holiday',
+  difficulty: 'Moderate',
+  overview: 'Discover why Zanzibar is rated among the world\'s top diving destinations. The waters around Mnemba Atoll offer exceptional visibility, vibrant coral reefs, and abundant marine life including green turtles, reef sharks, dolphins, and hundreds of tropical fish species. This package includes multiple dives at different sites suitable for all certification levels, from beginners to advanced divers.',
+  images: [
+    '../assets/Zanzibar/moses-londo-vxo_PFcaVAw-unsplash.jpg',
+    '../assets/Zanzibar/aviv-perets-eLfDul2Uu8k-unsplash.jpg',
+    '../assets/Zanzibar/nazarizal-mohammad-k5Z2AhnRwT8-unsplash.jpg',
+    '../assets/Zanzibar/jasmina-ajkic-Thi6IpSHiVs-unsplash.jpg'
+  ],
+  itinerary: [
+    { day: 'Day 1', title: 'Arrival & Dive Center Check-in', desc: 'Arrive in Zanzibar. Transfer to your beach resort. Visit the dive center for equipment check and briefing. Evening at leisure to explore the beach.' },
+    { day: 'Day 2-3', title: 'Mnemba Atoll Diving', desc: 'Two full days of diving at Mnemba Atoll. Two dives per day at different sites including the famous Mnemba Wall, Kichwani, and Wattabomi. See green turtles, Napoleon wrasse, moray eels, and clouds of tropical fish. Surface intervals on pristine sandbanks.' },
+    { day: 'Day 4', title: 'South Coast Diving', desc: 'Explore different dive sites along the southern coast. Options include the wreck of the Great Northern and deeper reef dives. Afternoon at leisure for beach relaxation or exploring Stone Town.' },
+    { day: 'Day 5', title: 'Final Dives & Departure', desc: 'Morning dives (if flight schedule permits — 24-hour no-fly rule applies). Transfer to airport for departure, or extend your stay.' }
+  ],
+  included: [
+    'Airport transfers', 'Beach resort accommodation', 'Daily breakfast', '8 guided dives', 'Dive equipment rental', 'PADI-certified dive masters', 'Boat transfers to dive sites', 'Marine park fees'
+  ],
+  excluded: [
+    'International flights', 'Visa fees', 'Travel insurance', 'Lunch and dinner', 'Alcoholic beverages', 'Dive certification course (if needed)', 'Tips'
+  ],
+  additionalInfo: '<h3 style="color: var(--earth-green);">Diving Requirements</h3><p style="color: #555; line-height: 1.8;">You must be a certified diver (PADI Open Water or equivalent). If you\'re not yet certified, we can arrange a 3-day Open Water course at an additional cost. The best diving conditions are June-October and December-February with visibility up to 30 meters. Water temperatures range from 25-29°C. Remember the 24-hour no-fly rule after diving. Mnemba Atoll is a protected marine reserve — no touching or removing marine life.</p>'
+},
+
+'zanzibar-combo': {
+  title: 'Safari & Zanzibar Combo',
+  subtitle: 'The Ultimate Tanzanian Experience',
+  heroImage: 'assets/Zanzibar/nazarizal-mohammad-k5Z2AhnRwT8-unsplash.jpg',
+  // price: '$3,800',
+  duration: '10-12 Days',
+  nights: '9-11 Nights',
+  groupSize: '2-6 People',
+  type: 'Safari & Beach Combination',
+  difficulty: 'Easy',
+  overview: 'The ultimate Tanzanian adventure combining the thrill of a Northern Circuit safari with the tropical paradise of Zanzibar. Spend 5-6 days tracking the Big Five in the Serengeti and Ngorongoro Crater, then fly to Zanzibar for 5-6 days of pure beach bliss. We handle all the logistics — you just enjoy the experience of a lifetime.',
+  images: [
+    '../assets/Zanzibar/moses-londo-vxo_PFcaVAw-unsplash.jpg',
+    'https://images.unsplash.com/photo-1547970811-4a4f95dadb48?q=80&w=1470&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1516426122078-c21e7db2494d?q=80&w=1470&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1549366021-9f761d450615?q=80&w=1470&auto=format&fit=crop'
+  ],
+  itinerary: [
+    { day: 'Day 1-2', title: 'Northern Safari Begins', desc: 'Arrive at Kilimanjaro Airport. Two days exploring Tarangire and Lake Manyara National Parks. See elephants, baobabs, and tree-climbing lions.' },
+    { day: 'Day 3-4', title: 'Serengeti Adventure', desc: 'Two full days in the Serengeti. Game drives following the wildlife. Optional hot air balloon safari at dawn.' },
+    { day: 'Day 5', title: 'Ngorongoro Crater', desc: 'Descend into the magnificent crater for a full day of Big Five viewing. Evening flight to Zanzibar.' },
+    { day: 'Day 6-9', title: 'Zanzibar Beach Paradise', desc: 'Four days of pure relaxation on Zanzibar\'s pristine beaches. Included snorkeling trip to Mnemba Atoll. Optional spice tour, Stone Town visit, or diving.' },
+    { day: 'Day 10', title: 'Departure', desc: 'Morning at leisure. Transfer to Zanzibar Airport for your departure flight.' }
+  ],
+  included: [
+    'All domestic flights', 'Safari accommodation', 'Beach resort accommodation', 'All meals on safari', 'Breakfast and dinner in Zanzibar', 'Game drives in 4x4', 'Professional guide', 'All park fees', 'Mnemba Atoll snorkeling', 'All transfers'
+  ],
+  excluded: [
+    'International flights', 'Visa fees', 'Travel insurance', 'Lunch in Zanzibar', 'Alcoholic beverages', 'Optional activities', 'Tips'
+  ],
+  additionalInfo: '<h3 style="color: var(--earth-green);">Perfect Combination</h3><p style="color: #555; line-height: 1.8;">This is our most popular package — the contrast between the excitement of safari and the relaxation of Zanzibar creates the perfect holiday balance. You can customize the safari portion (Northern, Southern, or Western Circuit) and choose your preferred beach area. Honeymooners love this combination — let us know if you\'re celebrating and we\'ll add special romantic touches.</p>'
+},
+  };
+
+    // ===== LOAD SAFARI DATA =====
+    function loadSafariData() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const safariId = urlParams.get('id') || 'serengeti-migration';
+      const data = safariData[safariId];
+
+      if (!data) {
+        document.getElementById('safariTitle').textContent = 'Safari Not Found';
+        document.getElementById('safariOverview').textContent = 'The requested safari could not be found. Please browse our available safaris.';
+        return;
+      }
+
+      // Set page title
+      document.title = `${data.title} | Erniza Africa Safaris`;
+
+      // Update hero
+      document.getElementById('safariHero').style.backgroundImage = 
+        `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('${data.heroImage}')`;
+      document.getElementById('safariTitle').textContent = data.title;
+      document.getElementById('safariSubtitle').querySelector('span').textContent = data.subtitle;
+      
+      // Update breadcrumb
+      document.getElementById('breadcrumbTitle').textContent = data.title;
+
+      // Update details
+      document.getElementById('safariOverview').textContent = data.overview;
+      document.getElementById('safariDuration').textContent = data.duration;
+      document.getElementById('safariNights').textContent = data.nights;
+      document.getElementById('safariGroup').textContent = data.groupSize;
+      document.getElementById('safariType').textContent = data.type;
+      document.getElementById('safariDifficulty').textContent = data.difficulty;
+      document.getElementById('safariPrice').textContent = data.price;
+
+      // Update tiered pricing (if available)
+      const tiersContainer = document.getElementById('priceTiers');
+      if (data.priceTiers) {
+        tiersContainer.innerHTML = `
+          <div class="price-tiers">
+            <h4><i class="fas fa-users"></i> Price per Person by Group Size</h4>
+            <table>
+              <thead>
+                <tr><th>Group</th><th>Tented Camps</th><th>Lodges / Hotels</th></tr>
+              </thead>
+              <tbody>
+                ${data.priceTiers.map(t => `
+                  <tr${t.best ? ' class="best-value"' : ''}>
+                    <td>${t.group}${t.best ? '<br><span class="best-value-badge">Best Value</span>' : ''}</td>
+                    <td>${t.tented}</td>
+                    <td>${t.lodge}</td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
+        `;
+      } else {
+        tiersContainer.innerHTML = '';
+      }
+
+      // Update image gallery
+      const gallery = document.getElementById('imageGallery');
+      gallery.innerHTML = data.images.map(img => 
+        `<img src="${img}" alt="${data.title}" loading="lazy">`
+      ).join('');
+
+      // Update itinerary
+      const itineraryContainer = document.getElementById('itineraryContainer');
+      itineraryContainer.innerHTML = data.itinerary.map(day => `
+        <div class="itinerary-day">
+          <h4><i class="fas fa-calendar-day" style="color: var(--savanna-gold); margin-right: 10px;"></i>${day.day}: ${day.title}</h4>
+          <p style="color: #555; line-height: 1.8;">${day.desc}</p>
+        </div>
+      `).join('');
+
+      // Update inclusions
+      const inclusionsContainer = document.getElementById('inclusionsContainer');
+      inclusionsContainer.innerHTML = `
+        <div>
+          <h4><i class="fas fa-check-circle" style="color: var(--earth-green);"></i> Included</h4>
+          <ul>
+            ${data.included.map(item => `<li><i class="fas fa-check"></i> ${item}</li>`).join('')}
+          </ul>
+        </div>
+        <div>
+          <h4><i class="fas fa-times-circle" style="color: #dc3545;"></i> Excluded</h4>
+          <ul>
+            ${data.excluded.map(item => `<li><i class="fas fa-times"></i> ${item}</li>`).join('')}
+          </ul>
+        </div>
+      `;
+
+      // Update additional info
+      document.getElementById('additionalInfo').innerHTML = data.additionalInfo || '';
+    }
+
+    // Load everything when page is ready
+    document.addEventListener('DOMContentLoaded', loadSafariData);
+  </script>
+    <!-- Google Translate Scripts -->
+  <script type="text/javascript" src="js/translator.js"></script>
+
+  <!-- Load Google Translate API -->
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!-- Hidden element for Google Translate -->
+  <div id="google_translate_element_hidden" style="display: none;"></div>
+</body>
+</html>
