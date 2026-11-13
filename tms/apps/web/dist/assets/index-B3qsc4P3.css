@@ -46,3 +46,7 @@ nav.scrollbar-thin::-webkit-scrollbar-corner {
 html{scrollbar-gutter:stable}
 body{overflow-x:hidden}
 .break-words{overflow-wrap:anywhere;word-break:break-word;white-space:normal}
+
+/* Reports layout fixes */
+@media (min-width: 1536px){.report-2col{grid-template-columns:repeat(2,minmax(0,1fr))}.report-2col-wide{grid-template-columns:1.15fr 1fr}}
+.data-table{min-width:min(680px,100%)}
