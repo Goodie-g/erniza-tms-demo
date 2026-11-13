@@ -23,4 +23,9 @@ rm -f "$PGLITE_DIR/postmaster.pid" "$PGLITE_DIR"/.s.PGSQL.* 2>/dev/null || true
 echo "Starting Erniza TMS demo on port ${PORT:-10000}"
 echo "Public URL: ${API_PUBLIC_URL:-http://localhost:${PORT:-10000}}"
 
+if [ "${PREFLIGHT:-1}" = "1" ]; then
+  node /app/preflight.mjs || true
+  rm -f "$PGLITE_DIR/postmaster.pid" "$PGLITE_DIR"/.s.PGSQL.* 2>/dev/null || true
+fi
+
 exec node dist/index.js

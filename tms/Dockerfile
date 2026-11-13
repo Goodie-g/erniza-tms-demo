@@ -32,6 +32,7 @@ COPY apps/api/.data/pgdata ./apps/api/.data/pgdata
 COPY apps/api/uploads ./apps/api/uploads
 
 COPY deploy/entrypoint.sh /app/entrypoint.sh
+COPY deploy/preflight.mjs /app/preflight.mjs
 
 RUN chmod +x /app/entrypoint.sh \
     && mkdir -p /app/apps/api/db/migrations \
