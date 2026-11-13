@@ -29,6 +29,8 @@ The repository is public so Render can build it without a GitHub App installatio
 | Email | `owner@ernizaafricasafaris.com` |
 | Password | `Erniza#Dev2026` |
 
+These credentials are also shown on the sign-in page, with a button that fills the form.
+
 A second seeded account exists with the same password:
 
 - `manager@ernizaafricasafaris.com`
