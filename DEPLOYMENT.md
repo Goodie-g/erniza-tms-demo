@@ -4,6 +4,17 @@ This folder contains everything needed to run the **Erniza Africa Safaris Touris
 
 The demo runs the existing compiled build (the TypeScript source is not present in this workspace) and ships with a pre-seeded PGlite database and uploaded safari images baked into the image.
 
+## Live demo
+
+| Item | Value |
+| --- | --- |
+| Demo URL | <https://erniza-tms-demo.onrender.com> |
+| Repository | <https://github.com/Goodie-g/erniza-tms-demo> |
+| Render Blueprint | `erniza-tms-demo` (`render.yaml`) |
+| Deploy trigger | Push to `main` |
+
+The repository is public so Render can build it without a GitHub App installation. It contains only the compiled demo, seeded sample data (`example.com` addresses and `555` phone numbers), and the public marketing site. No `.env` file or API keys are committed.
+
 ## What visitors get
 
 - The full admin SPA and API on a single public URL.
@@ -41,9 +52,11 @@ git push -u origin main
 
 ### 2. Create the Blueprint
 
+The Blueprint for this repository is already created and deploys on every push to `main`. To recreate it from scratch:
+
 1. Sign in to the [Render Dashboard](https://dashboard.render.com).
 2. Choose **New → Blueprint**.
-3. Connect the repository you just pushed.
+3. Connect the repository you just pushed, or paste its public URL.
 4. Render detects the root-level `render.yaml`.
 5. Apply the Blueprint and wait for the first build and deploy.
 
@@ -98,6 +111,8 @@ The image sets sensible defaults and the entrypoint derives the public URL from 
 | `PGLITE_PATH` | Embedded database directory | `/app/apps/api/.data/pgdata` |
 | `UPLOAD_DIR` | Uploaded media directory | `/app/apps/api/uploads` |
 | `LOG_LEVEL` | Pino log level | `info` |
+| `PREFLIGHT` | Set to `1` to log PGlite diagnostics at startup | `0` |
+| `PGLITE_DEBUG` | Set to `1` to log PostgreSQL startup messages | `0` |
 
 No database or storage service is required for the demo.
 
@@ -130,6 +145,14 @@ Check that `API_PUBLIC_URL` matches the public URL. On Render this is automatic 
 
 **The service starts but the health check fails.**
 Inspect the Render logs. The usual cause is a stale PGlite lock or an unwritable data directory. The entrypoint removes stale lock files and the image grants the `node` user ownership of `.data` and `uploads`.
+
+**`FATAL: could not open directory "pg_notify"` or `pg_filenode.map` errors.**
+Git does not preserve empty directories and wildcard ignore rules can drop required database files. The image relies on two safeguards, both already in this repository:
+
+- `.gitkeep` files in the empty PostgreSQL directories (`pg_notify`, `pg_stat_tmp`, `pg_wal/archive_status`, and so on), plus an entrypoint `mkdir -p` fallback.
+- `tms/.dockerignore` must **not** exclude `*.map`; it excludes only `*.js.map`, `*.css.map`, and `*.mjs.map`. PostgreSQL needs `global/pg_filenode.map`, and excluding it makes PGlite abort with `relation mapping file ... contains incorrect checksum`.
+
+If either safeguard is removed, the container will fail to start with `RuntimeError: Aborted()` and the real cause will appear in the logs only when `PGLITE_DEBUG=1` or `PREFLIGHT=1`.
 
 **Login fails.**
 Use `owner@ernizaafricasafaris.com` / `Erniza#Dev2026`. Both seeded accounts share this password. If the password was changed through the demo, restart the service to restore the baked data.
