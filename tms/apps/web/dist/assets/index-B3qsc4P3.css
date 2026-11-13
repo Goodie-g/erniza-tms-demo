@@ -42,3 +42,7 @@ nav.scrollbar-thin::-webkit-scrollbar-thumb:active {
 nav.scrollbar-thin::-webkit-scrollbar-corner {
   background: transparent;
 }
+/* Demo UI fitting fixes */
+html{scrollbar-gutter:stable}
+body{overflow-x:hidden}
+.break-words{overflow-wrap:anywhere;word-break:break-word;white-space:normal}
