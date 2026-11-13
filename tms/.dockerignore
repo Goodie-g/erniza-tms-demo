@@ -4,7 +4,9 @@ node_modules
 # Source, tests and build tooling are not needed for the prebuilt runtime.
 **/*.ts
 **/*.tsx
-**/*.map
+**/*.js.map
+**/*.css.map
+**/*.mjs.map
 **/*.log
 
 apps/api/.env

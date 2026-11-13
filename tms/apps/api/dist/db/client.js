@@ -67,7 +67,7 @@ class PgliteDb {
         if (dataDir !== 'memory://') {
             const resolved = path.resolve(dataDir);
             fs.mkdirSync(path.dirname(resolved), { recursive: true });
-            this.client = new PGlite(resolved, { debug: Number(process.env.PGLITE_DEBUG ?? 1) });
+            this.client = new PGlite(resolved, { debug: Number(process.env.PGLITE_DEBUG ?? 0) });
         }
         else {
             this.client = new PGlite();
