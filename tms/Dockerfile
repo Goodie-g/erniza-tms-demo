@@ -36,7 +36,8 @@ COPY deploy/entrypoint.sh /app/entrypoint.sh
 RUN chmod +x /app/entrypoint.sh \
     && mkdir -p /app/apps/api/db/migrations \
     && rm -f /app/apps/api/.data/pgdata/postmaster.pid /app/apps/api/.data/pgdata/.s.PGSQL.* \
-    && chown -R node:node /app/apps/api/.data /app/apps/api/uploads
+    && chown -R node:node /app/apps/api/.data /app/apps/api/uploads \
+    && chmod -R u+rwX,go-rwx /app/apps/api/.data
 
 USER node
 
