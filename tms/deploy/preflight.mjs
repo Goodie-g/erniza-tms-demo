@@ -28,16 +28,6 @@ try {
 }
 console.log('PREFLIGHT info', JSON.stringify(info));
 
-try {
-  const mem = new PGlite({ debug: 1 });
-  await mem.waitReady;
-  const result = await mem.query('select 1 as ok');
-  console.log('PREFLIGHT memory OK', JSON.stringify(result.rows));
-  await mem.close();
-} catch (error) {
-  console.error('PREFLIGHT memory FAILED', error, error?.cause);
-}
-
 const copy = '/tmp/pglite-preflight';
 try {
   fs.rmSync(copy, { recursive: true, force: true });
